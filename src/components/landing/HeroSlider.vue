@@ -1,6 +1,9 @@
 <template>
   <div class="h-full">
     <swiper
+      data-scroll
+      data-scroll-direction="vertical"
+      data-scroll-speed="6"
       :modules="modules"
       :slides-per-view="1"
       :pagination="{ clickable: true }"

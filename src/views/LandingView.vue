@@ -1,9 +1,9 @@
 <template>
   <main ref="container">
-    <HeroSection />
-    <JoinSection />
-    <HeroSection />
-    <HeroSection />
+    <HeroSection data-scroll-section />
+    <JoinSection data-scroll-section />
+    <HeroSection data-scroll-section />
+    <HeroSection data-scroll-section />
   </main>
 </template>
 

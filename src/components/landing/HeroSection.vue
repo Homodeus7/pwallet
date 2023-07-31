@@ -2,7 +2,7 @@
   <div class="h-[100vh] bg-black rounded-b-[100px] relative">
     <div class="max-w-[88rem] m-auto flex flex-col">
       <HeaderView />
-      <div class="pt-16">
+      <div class="mt-32">
         <HeroSlider />
       </div>
     </div>

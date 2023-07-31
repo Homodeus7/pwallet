@@ -5,7 +5,12 @@
       src="@/assets/img/join-sphere.png"
       alt="hero-sphere"
     />
-    <div class="max-w-[88rem] m-auto h-full flex items-center">
+    <div
+      class="max-w-[88rem] m-auto h-full flex items-center"
+      data-scroll
+      data-scroll-direction="vertical"
+      data-scroll-speed="6"
+    >
       <div class="flex flex-col gap-6 relative">
         <h1 class="font-bold text-6xl">Join to PlayWallet</h1>
         <p class="font-thin pr-4 max-w-[385px]">
@@ -52,9 +57,9 @@ const results = reactive([
   content: '';
   position: absolute;
   z-index: 0;
-  top: 15%;
+  top: 20%;
   width: 90%;
-  height: 70%;
+  height: 90%;
   right: 5%;
   opacity: 0.35;
   border-radius: 24px;
