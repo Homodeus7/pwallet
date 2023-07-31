@@ -6,7 +6,7 @@
       alt="hero-sphere"
     />
     <div class="max-w-[88rem] m-auto h-full flex items-center">
-      <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-6 relative">
         <h1 class="font-bold text-6xl">Join to PlayWallet</h1>
         <p class="font-thin pr-4 max-w-[385px]">
           Play Wallet is a fully on-chain protocol designed to empower you in navigating the crypto
@@ -20,6 +20,11 @@
             </div>
           </div>
         </div>
+        <img
+          class="absolute bottom-[-35%] left-[-10%] z-100"
+          src="@/assets/img/join-spike.png"
+          alt="hero-sphere"
+        />
       </div>
     </div>
   </div>
