@@ -9,7 +9,7 @@
       :pagination="{ clickable: true }"
       :mousewheel="{ forceToAxis: true }"
     >
-      <swiper-slide v-for="item in 3">
+      <swiper-slide v-for="_ in 3">
         <div class="flex flex-col gap-5 items-center p-8">
           <h1 class="font-thin text-6xl">
             Dive with
