@@ -3,10 +3,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#F4C76F',
         'medium-purple': '#8E67E0',
-        'deep-blush': '#E067A8',
-        success: '#AAF46F'
+        'deep-blush': '#E067A8'
+      },
+      spacing: {
+        '8xl': '88rem',
+        '9xl': '96rem'
       }
     }
   },

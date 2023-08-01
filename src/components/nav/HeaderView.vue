@@ -4,7 +4,7 @@
       <div class="flex items-center justify-between min-h-[100px]">
         <img src="@/assets/logo.png" />
         <div class="flex gap-14">
-          <a v-for="item in links" :key="item" :href="item.link" class="font-light">
+          <a v-for="(item, idx) in links" :key="idx" :href="item.link" class="font-light">
             {{ item.name }}
           </a>
         </div>

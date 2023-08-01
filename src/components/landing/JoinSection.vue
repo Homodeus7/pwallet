@@ -1,27 +1,32 @@
 <template>
   <div class="h-[100vh] bg-black rounded-[100px] relative">
     <img
-      class="absolute top-0 right-[50%] translate-x-[50%] z-100"
+      class="absolute top-0 right-[50%] translate-x-[50%] z-100 sphere"
       src="@/assets/img/join-sphere.png"
       alt="hero-sphere"
     />
+    <img
+      class="absolute bottom-[-25%] right-[20%] translate-x-[20%] z-100 iphone"
+      src="@/assets/img/iphone.png"
+      alt="iphone-image"
+    />
     <div
-      class="max-w-[88rem] m-auto h-full flex items-center"
       data-scroll
       data-scroll-direction="vertical"
       data-scroll-speed="6"
+      class="wrapper m-auto h-full flex items-center"
     >
-      <div class="flex flex-col gap-6 relative">
-        <h1 class="font-bold text-6xl">Join to PlayWallet</h1>
-        <p class="font-thin pr-4 max-w-[385px]">
+      <div class="flex flex-col gap-[1.5em] relative">
+        <h1 class="font-medium text-[3.70em]">Join to PlayWallet</h1>
+        <p class="font-light pr-[1em] join-text">
           Play Wallet is a fully on-chain protocol designed to empower you in navigating the crypto
           market according to uour preferences.
         </p>
-        <div class="border-[1px] border-[#FFF]/[12%] rounded-[30px] w-full p-5">
-          <div class="bg-[#FFF]/[8%] px-16 py-8 rounded-[24px] flex gap-32 content">
+        <div class="border-[1px] border-[#FFF]/[12%] rounded-[1.9em] w-full p-[1.25em]">
+          <div class="bg-[#FFF]/[8%] px-[4em] py-[1.9em] rounded-[1.5em] flex gap-[8em] content">
             <div v-for="(result, idx) in results" :key="idx" class="flex flex-col gap-1 z-10">
-              <span class="font-bold text-6xl">{{ result.amount }}</span>
-              <span class="font-thin text-lg">{{ result.name }}</span>
+              <span class="font-bold text-[3.75em]">{{ result.amount }}</span>
+              <span class="font-light text-[1.125em]">{{ result.name }}</span>
             </div>
           </div>
         </div>
@@ -34,6 +39,7 @@
     </div>
   </div>
 </template>
+
 <script lang="ts" setup>
 import { reactive } from 'vue'
 
@@ -52,7 +58,24 @@ const results = reactive([
   }
 ])
 </script>
-<style>
+
+<style lang="scss" scoped>
+@import '@/assets/main.css';
+
+.wrapper {
+  width: var(--container-width);
+}
+.sphere {
+  width: calc(var(--index) * var(--side-img));
+}
+.join-text {
+  max-width: calc(var(--index) * 14.5);
+}
+.iphone {
+  width: calc(var(--index) * 14.5);
+  filter: drop-shadow(-10mm 17mm 10mm rgba(0, 0, 0, 0.6));
+}
+
 .content:after {
   content: '';
   position: absolute;

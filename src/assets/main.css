@@ -4,8 +4,19 @@
 
 #app {
   font-family: 'Ranua Trials', sans-serif;
+  font-size: calc(var(--index) * 0.6);
   color: #fff;
   font-weight: normal;
+}
+
+:root {
+  --index: calc(1vw + 1vh);
+  --side-small: 26;
+  --side-big: 51;
+  --transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  --title-hero: calc(var(--index) * 2);
+  --container-width: calc(var(--index) * var(--side-big));
+  --side-img: 21;
 }
 
 *,

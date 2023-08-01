@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full">
+  <div>
     <swiper
       data-scroll
       data-scroll-direction="vertical"
@@ -10,20 +10,22 @@
       :mousewheel="{ forceToAxis: true }"
     >
       <swiper-slide v-for="_ in 3">
-        <div class="flex flex-col gap-5 items-center p-8">
-          <h1 class="font-thin text-6xl">
+        <div class="flex flex-col gap-5 items-center pb-[2em]">
+          <h1 class="font-light text-[3.5em]">
             Dive with
             <span class="font-bold">Play Wallet</span>
           </h1>
-          <p class="font-thin text-xl max-w-[540px] text-center">
+          <p class="font-light text-[1.2em] text-center hero-text">
             Play Wallet is a fully on-chain protocol designed to empower you in navigating the
             crypto market according to uour preferences.
           </p>
           <div class="flex gap-4">
-            <button class="py-3 px-10 border-r-fuchsia-100 border-2 rounded-2xl">
+            <button class="py-[0.75em] px-[2.5em] border-r-fuchsia-100 border-2 rounded-[1em]">
               Get started
             </button>
-            <button class="py-3 px-10 border-r-fuchsia-100 border-2 rounded-2xl">Learn More</button>
+            <button class="py-[0.75em] px-[2.5em] border-r-fuchsia-100 border-2 rounded-[1em]">
+              Learn More
+            </button>
           </div>
         </div>
       </swiper-slide>
@@ -39,7 +41,13 @@ import 'swiper/css'
 const modules = [Pagination, A11y]
 </script>
 
-<style>
+<style lang="scss">
+@import '@/assets/main.css';
+
+.hero-text {
+  max-width: calc(var(--index) * 20);
+}
+
 .swiper-pagination {
   bottom: 0px !important;
 }
