@@ -17,6 +17,7 @@
   --title-hero: calc(var(--index) * 2);
   --container-width: calc(var(--index) * var(--side-big));
   --side-img: 21;
+  --text-gradient: linear-gradient(135deg, #c8bdff, #8121dc, #b342de, #ff75e1, #ffddf8);
 }
 
 *,

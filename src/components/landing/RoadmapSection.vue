@@ -9,12 +9,12 @@
       <div class="flex flex-col items-center w-full">
         <h1 class="font-medium text-[3.70em]">Discover our Roadmap</h1>
         <p class="font-light pr-[1.2em] pb-[5.2em]">From mid 2023 to mid 2024</p>
-
         <div class="w-full">
-          <div
-            class="grid grid-cols-4 w-full pb-[4em] items-center justify-center text-center"
-          ></div>
-          <div class="roadmap w-full">
+          <div class="roadmap">
+            <div v-for="(item, idx) in events" :key="idx" class="text-center pb-[3em] relative">
+              <p class="text-[1.1em] text-[#FFF]/[60%]">{{ item.date }}</p>
+              <div class="absolute top-0 right-4 w-[1px] h-[500%] bg-[#D9D9D9]/[30%]"></div>
+            </div>
             <div
               v-for="(event, idx) in events"
               :key="idx"
@@ -76,22 +76,15 @@ const events = reactive([
 
 <style lang="scss" scoped>
 @import '@/assets/main.css';
-
 .wrapper {
   width: var(--container-width);
 }
-.sphere {
-  width: calc(var(--index) * var(--side-img));
-}
-.join-text {
-  max-width: calc(var(--index) * 14.5);
-}
-
 .roadmap {
   display: grid;
   align-items: center;
   margin: 0 -5px;
   grid-template-areas:
+    'q q q q'
     'a . . .'
     '. b . .'
     '. . c .'
