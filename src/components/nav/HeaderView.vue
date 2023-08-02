@@ -8,7 +8,7 @@
             {{ item.name }}
           </a>
         </div>
-        <button>Launch app</button>
+        <base-button special>Launch app</base-button>
       </div>
     </nav>
   </header>
@@ -16,7 +16,7 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-
+import BaseButton from '@/components/base/BaseButton.vue'
 const links = reactive([
   { link: '#', name: 'Join to PlayW' },
   { link: '#', name: 'Roadmap' },

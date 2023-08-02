@@ -6,9 +6,10 @@ export interface ButtonProps {
   disabled?: boolean
   primary?: boolean
   special?: boolean
+  bspecial?: boolean
   noborder?: boolean
   outlines?: boolean
-  present?: boolean
+  white?: boolean
   telegram?: boolean
   icon?: boolean
   width?: string
@@ -70,7 +71,7 @@ button {
   }
   transition: all linear $timeout;
   &.primary {
-    background: $primary-btn-linear;
+    background: var(--text-gradient);
     color: #3c704c;
     border: 0;
     transition: all linear $timeout;
@@ -81,67 +82,102 @@ button {
       &:active {
         opacity: 0.8;
         filter: drop-shadow(0 0mm 3mm rgba(237, 245, 140, 0.9));
-      }
-    }
-    &.special {
-      background: rgba(251, 233, 255, 0.1);
-      color: #fff;
-      border: 2px solid rgba(251, 233, 255, 0.1);
-      transition: all linear $timeout;
-      @media (min-width: 768px) {
-        &:hover {
-          background: rgba(251, 233, 255, 0.2);
-          filter: drop-shadow(0 0mm 3mm rgba(234, 226, 136, 0.9));
-        }
-        &:active {
-          opacity: 0.7;
-          filter: drop-shadow(0 0mm 3mm rgba(237, 245, 140, 0.9));
-        }
       }
     }
   }
   &.special {
-    background: #fff;
-    color: #3c704c;
-    border: 0;
+    padding: 0.7em 1.7em;
+    font-size: 0.8em;
+    font-weight: normal;
+    color: white;
+    background: #272727;
+    border-radius: 3.125em;
+    text-align: center;
+    border: 1px solid #3d3d3d;
+    text-decoration: none;
     transition: all linear $timeout;
+    z-index: 1;
     @media (min-width: 768px) {
+      transition: all linear $timeout;
       &:hover {
-        filter: drop-shadow(0 0mm 3mm rgba(234, 226, 136, 0.9));
-      }
-      &:active {
         opacity: 0.8;
-        filter: drop-shadow(0 0mm 3mm rgba(237, 245, 140, 0.9));
-      }
-    }
-  }
-  &.outlines {
-    background: transparent;
-    color: #eae288;
-    border: 1px solid #eae288;
-    @media (min-width: 768px) {
-      &:hover {
-        opacity: 0.9;
-        filter: drop-shadow(0 0mm 3mm rgba(234, 226, 136, 0.6));
       }
       &:active {
         opacity: 0.7;
-        filter: drop-shadow(0 0mm 3mm rgba(237, 245, 140, 0.9));
       }
     }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 113%;
+      height: 135%;
+      left: -0.55em;
+      bottom: -0.5em;
+      z-index: -1;
+      border-radius: 3.75em;
+      border: 1px solid #303030;
+    }
   }
-  &.present {
+  &.bspecial {
+    padding: 0.7em 1.7em;
+    font-size: 0.8em;
+    font-weight: normal;
     color: white;
+    background: #272727;
+    border-radius: 3.125em;
+    text-align: center;
+    border: 1px solid #3d3d3d;
+    text-decoration: none;
+    transition: all linear $timeout;
+    z-index: 1;
+    @media (min-width: 768px) {
+      transition: all linear $timeout;
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 0.7;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 107%;
+      height: 135%;
+      left: -0.55em;
+      bottom: -0.5em;
+      z-index: -1;
+      border-radius: 3.75em;
+      border: 1px solid #303030;
+    }
+  }
+  &.white {
+    padding: 0.9em 3.3em;
+    background: white;
+    color: black;
     transition: all linear $timeout;
     @media (min-width: 768px) {
       transition: all linear $timeout;
       &:hover {
-        color: #efd759;
-        filter: drop-shadow(0 0mm 3mm rgba(234, 226, 136, 0.9));
+        opacity: 0.8;
       }
       &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+  &.outlines {
+    padding: 0.9em 3.3em;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    @media (min-width: 768px) {
+      transition: all linear $timeout;
+      &:hover {
         opacity: 0.8;
-        filter: drop-shadow(0 0mm 3mm rgba(237, 245, 140, 0.9));
+      }
+      &:active {
+        opacity: 0.7;
       }
     }
   }
@@ -156,7 +192,7 @@ button {
         color: transparent;
         -webkit-background-clip: text;
         background-clip: text;
-        background-image: $text-linear;
+        background-image: var(--text-gradient);
         filter: drop-shadow(0 0mm 3mm rgba(234, 226, 136, 0.8));
       }
       &:active {

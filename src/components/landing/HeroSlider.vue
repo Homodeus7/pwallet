@@ -12,17 +12,13 @@
             Dive with
             <span class="font-bold">Play Wallet</span>
           </h1>
-          <p class="font-light text-[1.2em] text-center hero-text">
+          <p class="font-light text-[1.2em] text-center hero-text pb-[1em]">
             Play Wallet is a fully on-chain protocol designed to empower you in navigating the
             crypto market according to uour preferences.
           </p>
           <div class="flex gap-4">
-            <button class="py-[0.75em] px-[2.5em] border-r-fuchsia-100 border-2 rounded-[1em]">
-              Get started
-            </button>
-            <button class="py-[0.75em] px-[2.5em] border-r-fuchsia-100 border-2 rounded-[1em]">
-              Learn More
-            </button>
+            <base-button white> Get started </base-button>
+            <base-button outlines> Learn More </base-button>
           </div>
         </div>
       </swiper-slide>
@@ -35,6 +31,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Pagination, A11y } from 'swiper/modules'
 import 'swiper/css/pagination'
 import 'swiper/css'
+import BaseButton from '@/components/base/BaseButton.vue'
 const modules = [Pagination, A11y]
 </script>
 
