@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[100vh] bg-black rounded-[100px] relative">
+  <div class="h-[100vh] bg-black rounded-[6em] relative">
     <img
       class="absolute top-0 right-[50%] translate-x-[50%] z-100 sphere"
       src="@/assets/img/join-sphere.png"
@@ -17,7 +17,7 @@
       class="wrapper m-auto h-full flex items-center"
     >
       <div class="flex flex-col gap-[1.5em] relative">
-        <h1 class="font-medium text-[3.70em]">Join to PlayWallet</h1>
+        <h2 class="font-medium text-[3.70em]">Join to PlayWallet</h2>
         <p class="font-light pr-[1em] join-text">
           Play Wallet is a fully on-chain protocol designed to empower you in navigating the crypto
           market according to uour preferences.

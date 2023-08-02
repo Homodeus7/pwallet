@@ -4,7 +4,7 @@
       class="wrapper m-auto h-full flex items-end justify-center pb-[2em]"
       data-scroll
       data-scroll-direction="horizontal"
-      data-scroll-speed="6"
+      data-scroll-speed="5"
     >
       <div class="flex flex-col items-center w-full">
         <h1 class="font-medium text-[3.70em]">Discover our Roadmap</h1>
