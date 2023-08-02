@@ -1,30 +1,28 @@
 <template>
-  <div class="h-[100vh]">
-    <div
-      class="wrapper m-auto h-full flex items-end justify-center pb-[2em]"
-      data-scroll
-      data-scroll-direction="horizontal"
-      data-scroll-speed="5"
-    >
-      <div class="flex flex-col items-center w-full">
-        <h1 class="font-medium text-[3.70em]">Discover our Roadmap</h1>
-        <p class="font-light pr-[1.2em] pb-[5.2em]">From mid 2023 to mid 2024</p>
-        <div class="w-full">
-          <div class="roadmap">
-            <div v-for="(item, idx) in events" :key="idx" class="text-center pb-[3em] relative">
-              <p class="text-[1.1em] text-[#FFF]/[60%]">{{ item.date }}</p>
-              <div class="absolute top-0 right-4 w-[1px] h-[500%] bg-[#D9D9D9]/[30%]"></div>
-            </div>
-            <div
-              v-for="(event, idx) in events"
-              :key="idx"
-              :class="event.class"
-              class="bg-[#FFF] px-[1em] py-[1em] rounded-[1em] text-center"
-            >
-              <p class="text-[#282F42] text-[1.2em]">
-                {{ event.name }}
-              </p>
-            </div>
+  <div
+    class="wrapper m-auto h-[100vh] flex items-end justify-center pb-[2em]"
+    data-scroll
+    data-scroll-direction="horizontal"
+    data-scroll-speed="5"
+  >
+    <div class="flex flex-col items-center w-full">
+      <h1 class="font-medium text-[3.70em]">Discover our Roadmap</h1>
+      <p class="font-light pr-[1.2em] pb-[5.2em]">From mid 2023 to mid 2024</p>
+      <div class="w-full">
+        <div class="roadmap">
+          <div v-for="(item, idx) in events" :key="idx" class="text-center pb-[3em] relative">
+            <p class="text-[1.1em] text-[#FFF]/[60%]">{{ item.date }}</p>
+            <div class="absolute top-0 right-4 w-[1px] h-[500%] bg-[#D9D9D9]/[30%]"></div>
+          </div>
+          <div
+            v-for="(event, idx) in events"
+            :key="idx"
+            :class="event.class"
+            class="bg-[#FFF] px-[1em] py-[1em] rounded-[1em] text-center"
+          >
+            <p class="text-[#282F42] text-[1.2em]">
+              {{ event.name }}
+            </p>
           </div>
         </div>
       </div>
@@ -34,21 +32,6 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-
-const dates = reactive([
-  {
-    name: 'Q3 2023'
-  },
-  {
-    name: 'Q4 2023'
-  },
-  {
-    name: 'Q1 2024'
-  },
-  {
-    name: 'Q2 2024'
-  }
-])
 
 const events = reactive([
   {
