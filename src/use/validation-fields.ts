@@ -9,7 +9,7 @@ export function useValidationFields() {
       .trim()
       .required('Please enter your email.')
       .email('Please enter your email.')
-      .matches(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g, 'Please enter your email.')
+      .matches(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g, 'Please enter a valid email address.')
   )
 
   const { value: password, errorMessage: pError } = useField(

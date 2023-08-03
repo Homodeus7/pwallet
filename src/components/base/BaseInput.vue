@@ -7,26 +7,27 @@
         v-model="value"
         :class="{
           invalid: !isValid,
-          'px-6 h-[40px] w-full bg-transparent border border-[#FBE9FF]/[10%]': !background,
-          'px-6 h-[40px] w-full bg-[#FBE9FF]/[10%]': background
+          'w-full bg-transparent border border-[#334155]': !background,
+          'w-full bg-[#FBE9FF]/[10%]': background
         }"
         :placeholder="placeholder"
         :disabled="disabled"
       />
     </label>
 
-    <div class="absolute top-[43px] right-2 md:right-1">
+    <div class="absolute bottom-[0.3em] right-[1em]">
       <slot name="suffix-icon"></slot>
     </div>
-    <div class="absolute top-[43px] left-2 md:left-1">
+    <div class="absolute bottom-[0.3em] left-[1em]">
       <slot name="prefix-icon"></slot>
     </div>
     <slot></slot>
     <span
       v-if="errorMessage && !isValid"
-      class="text-error absolute -bottom-4 left-2 text-[10px] md:text-xs font-medium"
-      >{{ errorMessage }}</span
+      class="absolute -bottom-[1.7em] left-2 text-[0.8em] font-medium text-[#ff8686]"
     >
+      {{ errorMessage }}
+    </span>
   </div>
 </template>
 
@@ -35,7 +36,7 @@ import { computed } from 'vue'
 import { onMounted, ref } from 'vue'
 
 export interface InputProps {
-  modelValue?: string
+  modelValue?: string | unknown
   placeholder?: string
   isValid?: boolean
   errorMessage?: string
@@ -72,26 +73,22 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 label {
-  font-size: 14px;
-  font-weight: 900;
-  line-height: 2.5;
+  font-size: 16px;
+  font-weight: 300;
 }
 input[type='text'],
 input[type='password'] {
-  border-radius: 100px;
+  padding: 0.7em 1.7em;
+  border-radius: 1em;
   outline: none;
-  border &:focus {
-    border-color: rgba(251, 233, 255, 0.1);
-  }
-
   &::placeholder {
-    font-size: 14px;
-    font-weight: 900;
-    color: #b0b0b0;
+    font-size: 16px;
+    font-weight: 300;
+    color: #b0b7c3;
   }
 
   &.invalid {
-    border-color: red;
+    border-color: #ff8686;
   }
 }
 </style>

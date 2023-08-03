@@ -1,12 +1,6 @@
 <template>
   <BaseIcon v-bind="props">
-    <svg
-      width="41"
-      height="40"
-      viewBox="0 0 41 40"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="34" height="34" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M34.9131 4.457L22.4209 13.7351L24.731 8.26114L34.9131 4.457Z"
         fill="#E2761B"

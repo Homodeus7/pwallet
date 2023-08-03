@@ -7,7 +7,7 @@ export interface ButtonProps {
   primary?: boolean
   special?: boolean
   bspecial?: boolean
-  noborder?: boolean
+  connect?: boolean
   outlines?: boolean
   white?: boolean
   telegram?: boolean
@@ -71,17 +71,20 @@ button {
   }
   transition: all linear $timeout;
   &.primary {
-    background: var(--text-gradient);
-    color: #3c704c;
+    padding: 0.7em 1.7em;
+    background: #6271eb;
+    color: white;
     border: 0;
+    border-radius: 0.7em;
     transition: all linear $timeout;
     @media (min-width: 768px) {
+      transition: all linear $timeout;
       &:hover {
-        filter: drop-shadow(0 0mm 3mm rgba(234, 226, 136, 0.9));
+        background: #33343d;
+        color: #70758f;
       }
       &:active {
-        opacity: 0.8;
-        filter: drop-shadow(0 0mm 3mm rgba(237, 245, 140, 0.9));
+        opacity: 0.7;
       }
     }
   }
@@ -181,37 +184,18 @@ button {
       }
     }
   }
-  &.telegram {
-    background: transparent;
-    color: #f0d33c;
-    border: 1px solid rgba(251, 233, 255, 0.1);
+  &.connect {
+    font-size: 0.8em;
+    padding: 0.5em 3.3em;
+    background: rgba(51, 65, 85, 0.4);
     transition: all linear $timeout;
     @media (min-width: 768px) {
       &:hover {
-        transition: all linear $timeout;
-        color: transparent;
-        -webkit-background-clip: text;
-        background-clip: text;
-        background-image: var(--text-gradient);
-        filter: drop-shadow(0 0mm 3mm rgba(234, 226, 136, 0.8));
+        filter: drop-shadow(0 0mm 3mm rgba(100, 127, 165, 0.5));
       }
       &:active {
         opacity: 0.8;
-        filter: drop-shadow(0 0mm 3mm rgba(237, 245, 140, 0.3));
-      }
-    }
-  }
-  &.noborder {
-    background: rgba(251, 233, 255, 0.1);
-    transition: all linear $timeout;
-    @media (min-width: 768px) {
-      &:hover {
-        background: rgba(251, 233, 255, 0.2);
-        filter: drop-shadow(0 0mm 3mm rgba(234, 226, 136, 0.8));
-      }
-      &:active {
-        opacity: 0.8;
-        filter: drop-shadow(0 0mm 3mm rgba(237, 245, 140, 0.3));
+        filter: drop-shadow(0 0mm 3mm rgba(100, 127, 165, 0.2));
       }
     }
   }
@@ -220,12 +204,14 @@ button {
     opacity: 0.5;
     @media (min-width: 768px) {
       &:hover {
+        background: #6271eb;
+        color: white;
         opacity: 0.5;
-        filter: drop-shadow(0 0mm 0mm rgba(234, 226, 136, 0.3));
       }
       &:active {
+        background: #6271eb;
+        color: white;
         opacity: 0.5;
-        filter: drop-shadow(0 0mm 0mm rgba(237, 245, 140, 0.3));
       }
     }
   }
