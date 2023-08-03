@@ -19,6 +19,14 @@ const router = createRouter({
       meta: {
         layout: 'dashbroad'
       }
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/views/LoginView.vue'),
+      meta: {
+        layout: 'landing'
+      }
     }
   ]
 })

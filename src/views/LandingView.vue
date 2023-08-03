@@ -4,7 +4,7 @@
     <JoinSection data-scroll-section />
     <RoadmapSection data-scroll-section />
     <PresentationSection data-scroll-section />
-    <FooterView data-scroll-section />
+    <FooterSection data-scroll-section />
   </main>
 </template>
 
@@ -13,7 +13,7 @@ import HeroSection from '@/components/landing/HeroSection.vue'
 import JoinSection from '@/components/landing/JoinSection.vue'
 import RoadmapSection from '@/components/landing/RoadmapSection.vue'
 import PresentationSection from '@/components/landing/PresentationSection.vue'
-import FooterView from '@/components/nav/FooterView.vue'
+import FooterSection from '@/components/nav/FooterSection.vue'
 
 import { ref, onMounted } from 'vue'
 import LocomotiveScroll from 'locomotive-scroll'

@@ -3,7 +3,7 @@
     <div class="wrapper m-auto flex flex-col">
       <HeaderSection />
       <div data-scroll data-scroll-direction="vertical" data-scroll-speed="6" class="mt-[6em]">
-        <HeroSlider />
+        <LoginForm />
       </div>
     </div>
     <img
@@ -22,8 +22,8 @@
 </template>
 <script lang="ts" setup>
 import HeaderSection from '@/components/nav/HeaderSection.vue'
-import HeroSlider from '@/components/landing/HeroSlider.vue'
 import BaseSocial from '@/components/base/BaseSocial.vue'
+import LoginForm from '@/components/inputs/LoginForm.vue'
 </script>
 
 <style lang="scss" scoped>
