@@ -27,6 +27,14 @@ const router = createRouter({
       meta: {
         layout: 'landing'
       }
+    },
+    {
+      path: '/registration',
+      name: 'registration',
+      component: () => import('@/views/RegistrationView.vue'),
+      meta: {
+        layout: 'landing'
+      }
     }
   ]
 })

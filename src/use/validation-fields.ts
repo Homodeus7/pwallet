@@ -22,21 +22,10 @@ export function useValidationFields() {
       .min(8, ({ min }) => `Password must contain at least ${min} characters`)
   )
 
-  const { value: retypePassword, errorMessage: rtError } = useField(
-    'retypePassword',
-    yup
-      .string()
-      .trim()
-      .required('Please retype your password.')
-      .oneOf([yup.ref('password')], 'Your passwords do not match.')
-  )
-
   return {
     email,
     password,
     eError,
-    pError,
-    retypePassword,
-    rtError
+    pError
   }
 }

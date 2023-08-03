@@ -14,17 +14,18 @@
         :disabled="disabled"
       />
     </label>
+    <div class="absolute bottom-[0.9em] left-[1em]">
+      <slot name="prefix-icon"></slot>
+    </div>
 
     <div class="absolute bottom-[0.3em] right-[1em]">
       <slot name="suffix-icon"></slot>
     </div>
-    <div class="absolute bottom-[0.3em] left-[1em]">
-      <slot name="prefix-icon"></slot>
-    </div>
+
     <slot></slot>
     <span
       v-if="errorMessage && !isValid"
-      class="absolute -bottom-[1.7em] left-2 text-[0.8em] font-medium text-[#ff8686]"
+      class="absolute -bottom-[1.6em] left-2 text-[0.8em] font-medium text-[#ff8686]"
     >
       {{ errorMessage }}
     </span>
@@ -78,7 +79,7 @@ label {
 }
 input[type='text'],
 input[type='password'] {
-  padding: 0.7em 1.7em;
+  padding: 0.7em 1em 0.7em 2.6em;
   border-radius: 1em;
   outline: none;
   &::placeholder {

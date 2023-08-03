@@ -80,8 +80,7 @@ button {
     @media (min-width: 768px) {
       transition: all linear $timeout;
       &:hover {
-        background: #33343d;
-        color: #70758f;
+        opacity: 0.8;
       }
       &:active {
         opacity: 0.7;

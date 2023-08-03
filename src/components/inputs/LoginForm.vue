@@ -7,8 +7,9 @@
     <BaseButton connect class="w-full flex items-center justify-center">
       <span class="ml-[0.8em]">Connect Wallet</span>
       <template v-slot:prefix-icon>
-        <WalletsIcon />
-        <MetamaskIcon class="-ml-[0.8em]" />
+        <img src="@/assets/icon/coinbase.svg" />
+        <img class="-ml-4" src="@/assets/icon/metamask.png" />
+        <img class="-ml-4" src="@/assets/icon/phantom.png" />
       </template>
     </BaseButton>
     <DecorText>OR</DecorText>
@@ -18,7 +19,11 @@
         :is-valid="Boolean(!valid.eError.value)"
         placeholder="Email"
         :error-message="valid.eError.value"
-      />
+      >
+        <template v-slot:prefix-icon>
+          <img src="@/assets/icon/email.svg" />
+        </template>
+      </BaseInput>
       <BaseInput
         :password="showPassword"
         v-model="valid.password.value"
@@ -26,6 +31,9 @@
         :is-valid="Boolean(!valid.pError.value)"
         placeholder="Password"
       >
+        <template v-slot:prefix-icon>
+          <img src="@/assets/icon/lock.svg" />
+        </template>
         <template v-slot:suffix-icon>
           <Button @click="showPassword = !showPassword">
             <img v-show="!showPassword" src="@/assets/icon/hide.svg" />
@@ -49,9 +57,9 @@
     <BaseButton primary :disabled="!isValid" class="w-full"> Log In </BaseButton>
     <div class="flex gap-2">
       <span class="text-[#8d98af]">Don't have an account? </span>
-      <a href="#">
+      <router-link to="registration">
         <span class="text-[#6271EB]">Sign Up</span>
-      </a>
+      </router-link>
     </div>
   </div>
 </template>
@@ -62,8 +70,7 @@ import BaseInput from '@/components/base/BaseInput.vue'
 import BaseButton from '@/components/base/BaseButton.vue'
 import BaseCheckbox from '@/components/base/BaseCheckbox.vue'
 import DecorText from '@/components/base/DecorText.vue'
-import MetamaskIcon from '@/components/base/icons/MetamaskIcon.vue'
-import WalletsIcon from '@/components/base/icons/WalletsIcon.vue'
+import { RouterLink } from 'vue-router'
 import { useValidationFields } from '@/use/validation-fields'
 
 const checkboxActive = ref(true)
