@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[100vh] rounded-b-[6em] background-img relative">
+  <div class="h-[100vh] bg-black rounded-b-[6em] background-img relative">
     <div class="wrapper h-full m-auto flex flex-col">
       <HeaderSection />
       <LoginForm />

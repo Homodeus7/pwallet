@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[100vh] rounded-b-[6em] background-img relative">
+  <div class="h-[100vh] bg-black rounded-b-[6em] background-img relative">
     <div class="wrapper m-auto flex flex-col">
       <HeaderSection />
       <div data-scroll data-scroll-direction="vertical" data-scroll-speed="6" class="mt-[6em]">

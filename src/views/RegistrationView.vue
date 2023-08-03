@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[100vh] rounded-b-[6em] relative background-img overflow-hidden">
+  <div class="h-[100vh] bg-black rounded-b-[6em] relative background-img overflow-hidden">
     <div class="wrapper h-full m-auto flex flex-col">
       <HeaderSection />
       <RegistrationForm />
