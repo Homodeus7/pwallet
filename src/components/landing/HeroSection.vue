@@ -7,6 +7,14 @@
       </div>
     </div>
     <img
+      data-scroll
+      data-scroll-direction="vertical"
+      data-scroll-speed="4"
+      class="absolute bottom-[25%] right-[7%] z-[-1]"
+      src="@/assets/img/hero_decor.png"
+      alt="hero-sphere"
+    />
+    <img
       class="absolute bottom-0 right-[50%] translate-x-[50%] z-100 sphere"
       src="@/assets/img/hero-sphere.png"
       alt="hero-sphere"
