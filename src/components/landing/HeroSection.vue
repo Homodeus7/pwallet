@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[100vh] bg-black rounded-b-[6em] relative">
+  <div class="h-[100vh] rounded-b-[6em] background-img relative">
     <div class="wrapper m-auto flex flex-col">
       <HeaderSection />
       <div data-scroll data-scroll-direction="vertical" data-scroll-speed="6" class="mt-[6em]">
@@ -33,5 +33,11 @@ import BaseSocial from '@/components/base/BaseSocial.vue'
 }
 .sphere {
   width: calc(var(--index) * var(--side-img));
+}
+.background-img {
+  background-image: url('@/assets/img/hero_sky.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 </style>

@@ -17,12 +17,12 @@
       <div class="flex gap-[1em]">
         <BaseInput :is-valid="true" placeholder="First name">
           <template v-slot:prefix-icon>
-            <img class="bottom-[0.2em]" src="@/assets/icon/user.svg" />
+            <img src="@/assets/icon/user.svg" />
           </template>
         </BaseInput>
         <BaseInput :is-valid="true" placeholder="Last name">
           <template v-slot:prefix-icon>
-            <img class="bottom-[0.2em]" src="@/assets/icon/user.svg" />
+            <img src="@/assets/icon/user.svg" />
           </template>
         </BaseInput>
       </div>
