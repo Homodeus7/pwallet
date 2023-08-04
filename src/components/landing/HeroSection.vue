@@ -37,6 +37,8 @@ import BaseSocial from '@/components/base/BaseSocial.vue'
 <style lang="scss" scoped>
 @import '@/assets/main.css';
 .wrapper {
+  width: 100%;
+  padding: 0 1em;
   @media (min-width: 768px) {
     width: var(--container-width);
   }

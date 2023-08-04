@@ -98,7 +98,6 @@ button {
     border: 1px solid #3d3d3d;
     text-decoration: none;
     transition: all linear $timeout;
-    z-index: 1;
     @media (min-width: 768px) {
       transition: all linear $timeout;
       &:hover {
@@ -115,7 +114,6 @@ button {
       height: 135%;
       left: -0.55em;
       bottom: -0.5em;
-      z-index: -1;
       border-radius: 3.75em;
       border: 1px solid #303030;
     }
