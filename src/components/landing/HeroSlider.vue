@@ -17,8 +17,8 @@
             crypto market according to uour preferences.
           </p>
           <div class="flex gap-4">
-            <base-button white> Get started </base-button>
-            <base-button outlines> Learn More </base-button>
+            <base-button white class="w-[12em]"> Get started </base-button>
+            <base-button outlines class="w-[12em]"> Learn More </base-button>
           </div>
         </div>
       </swiper-slide>

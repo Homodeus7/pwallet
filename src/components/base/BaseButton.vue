@@ -154,7 +154,7 @@ button {
     }
   }
   &.white {
-    padding: 0.9em 3.3em;
+    padding: 0.9em 1.2em;
     background: white;
     color: black;
     transition: all linear $timeout;
@@ -169,10 +169,10 @@ button {
     }
   }
   &.outlines {
-    padding: 0.9em 3.3em;
+    padding: 0.9em 1.2em;
     background: transparent;
     color: white;
-    border: 1px solid white;
+    border: 1px solid #3d3d3d;
     @media (min-width: 768px) {
       transition: all linear $timeout;
       &:hover {

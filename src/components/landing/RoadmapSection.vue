@@ -4,7 +4,7 @@
       class="wrapper h-full m-auto flex items-end justify-center pb-[2em]"
       data-scroll
       data-scroll-direction="horizontal"
-      data-scroll-speed="5"
+      data-scroll-speed="4"
     >
       <div class="flex flex-col items-center w-full">
         <h1 class="font-medium text-[3.70em]">Discover our Roadmap</h1>
@@ -18,12 +18,21 @@
             <div
               v-for="(event, idx) in events"
               :key="idx"
-              :class="event.class"
-              class="bg-[#FFF] px-[1em] py-[1em] rounded-[1em] text-center"
+              :class="[
+                event.class,
+                {
+                  'bg-[#282F42] text-white': event.started,
+                  'bg-[#FFF] text-[#282F42]': !event.started
+                }
+              ]"
+              class="text-[1.2em] py-[1em] px-[0.3em] rounded-[1em] flex items-center justify-center gap-[0.6em]"
             >
-              <p class="text-[#282F42] text-[1.2em]">
+              <span>
                 {{ event.name }}
-              </p>
+              </span>
+              <div v-if="event.started" class="p-[0.6em] bg-white rounded-[0.8em]">
+                <img src="@/assets/icon/arrowl.svg" />
+              </div>
             </div>
           </div>
         </div>
@@ -39,22 +48,26 @@ const events = reactive([
   {
     name: 'Launching on Arbitrum Network',
     class: 'launch',
-    date: 'Q3 2023'
+    date: 'Q3 2023',
+    started: true
   },
   {
     name: 'IDO',
     class: 'ido',
-    date: 'Q4 2023'
+    date: 'Q4 2023',
+    started: false
   },
   {
     name: 'AI Game mod',
     class: 'game',
-    date: 'Q1 2024'
+    date: 'Q1 2024',
+    started: false
   },
   {
     name: 'Extension to other networks',
     class: 'extension',
-    date: 'Q2 2024'
+    date: 'Q2 2024',
+    started: false
   }
 ])
 </script>

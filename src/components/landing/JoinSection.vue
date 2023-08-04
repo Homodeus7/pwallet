@@ -6,7 +6,7 @@
       alt="hero-sphere"
     />
     <img
-      class="absolute bottom-[-25%] right-[20%] translate-x-[20%] z-100 iphone"
+      class="absolute bottom-[-19%] translate-y-[19%] right-[20%] translate-x-[20%] z-100 iphone"
       src="@/assets/img/iphone.png"
       alt="iphone-image"
     />
@@ -72,7 +72,7 @@ const results = reactive([
   max-width: calc(var(--index) * 14.5);
 }
 .iphone {
-  width: calc(var(--index) * 14.5);
+  width: calc(var(--index) * 24);
   filter: drop-shadow(-10mm 17mm 10mm rgba(0, 0, 0, 0.6));
 }
 
