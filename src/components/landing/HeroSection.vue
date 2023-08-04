@@ -2,20 +2,20 @@
   <div class="h-[100vh] bg-black rounded-b-[6em] background-img relative">
     <div class="wrapper m-auto flex flex-col">
       <HeaderSection />
-      <div data-scroll data-scroll-direction="vertical" data-scroll-speed="6" class="mt-[6em]">
+      <!-- <div data-scroll data-scroll-direction="vertical" data-scroll-speed="6" class="mt-[6em]">
         <HeroSlider />
-      </div>
+      </div> -->
     </div>
     <img
       data-scroll
       data-scroll-direction="vertical"
       data-scroll-speed="4"
-      class="absolute bottom-[25%] right-[7%] z-[-1]"
+      class="absolute bottom-[25%] right-[7%] z-[-1] hidden lg:block"
       src="@/assets/img/hero_decor.png"
       alt="hero-sphere"
     />
     <img
-      class="absolute bottom-0 right-[50%] translate-x-[50%] z-100 sphere"
+      class="absolute bottom-0 right-[50%] translate-x-[50%] z-100 sphere hidden lg:block"
       src="@/assets/img/hero-sphere.png"
       alt="hero-sphere"
     />
@@ -24,7 +24,7 @@
       data-scroll-direction="vertical"
       data-scroll-speed="2"
       oborder
-      class="absolute bottom-[10%] right-[12%]"
+      class="absolute bottom-[10%] right-[12%] hidden lg:block"
     />
   </div>
 </template>
@@ -37,15 +37,19 @@ import BaseSocial from '@/components/base/BaseSocial.vue'
 <style lang="scss" scoped>
 @import '@/assets/main.css';
 .wrapper {
-  width: var(--container-width);
+  @media (min-width: 768px) {
+    width: var(--container-width);
+  }
 }
 .sphere {
   width: calc(var(--index) * var(--side-img));
 }
 .background-img {
-  background-image: url('@/assets/img/hero_sky.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 1;
+  @media (min-width: 768px) {
+    background-image: url('@/assets/img/hero_sky.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
 }
 </style>

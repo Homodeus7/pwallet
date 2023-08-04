@@ -4,9 +4,12 @@
 
 #app {
   font-family: 'Ranua Trials', sans-serif;
-  font-size: calc(var(--index) * 0.6);
+  font-size: calc(var(--index) * 1.15);
   color: #fff;
   font-weight: normal;
+  @media (min-width: 768px) {
+    font-size: calc(var(--index) * 0.6);
+  }
 }
 
 :root {
