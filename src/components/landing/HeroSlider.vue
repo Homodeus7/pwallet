@@ -18,7 +18,7 @@
             Play Wallet is a fully on-chain protocol designed to empower you in navigating the
             crypto market according to uour preferences.
           </p>
-          <div class="flex flex-col gap-4 w-full px-[1em]">
+          <div class="flex flex-col lg:flex-row gap-4 w-full lg:max-w-[25.25em] px-[1em]">
             <base-button white class="w-full"> Get started </base-button>
             <base-button outlines class="w-full"> Learn more </base-button>
           </div>

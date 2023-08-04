@@ -34,7 +34,11 @@ import BaseButton from '@/components/base/BaseButton.vue'
 @import '@/assets/main.css';
 
 .wrapper {
-  width: var(--container-width);
+  width: 100%;
+  padding: 0 1em;
+  @media (min-width: 768px) {
+    width: var(--container-width);
+  }
 }
 .present-bg {
   width: calc(var(--index) * 43.3);

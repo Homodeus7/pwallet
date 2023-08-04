@@ -89,7 +89,11 @@ const menuLinks = reactive([
 @import '@/assets/main.css';
 
 .wrapper {
-  width: var(--container-width);
+  width: 100%;
+  padding: 0 1em;
+  @media (min-width: 768px) {
+    width: var(--container-width);
+  }
 }
 .join-text {
   max-width: calc(var(--index) * 17);
