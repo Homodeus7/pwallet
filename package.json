@@ -12,6 +12,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@types/locomotive-scroll": "^4.1.0",
     "@types/swiper": "^6.0.0",
     "@vee-validate/yup": "^4.11.1",
     "@vueuse/core": "^10.3.0",

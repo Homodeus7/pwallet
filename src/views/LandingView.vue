@@ -18,7 +18,7 @@ import FooterSection from '@/components/nav/FooterSection.vue'
 import { ref, onMounted } from 'vue'
 import LocomotiveScroll from 'locomotive-scroll'
 
-const container = ref(null)
+const container = ref<HTMLElement | undefined>(undefined)
 
 const setLocomotiveScroll = () => {
   new LocomotiveScroll({
