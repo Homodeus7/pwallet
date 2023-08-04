@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[80vh]">
+  <div class="h-[70vh] lg:h-[80vh]">
     <div class="wrapper m-auto h-full flex items-center justify-center">
       <div
         data-scroll
@@ -8,14 +8,22 @@
         data-scroll-speed="5"
         class="flex items-center present-bg"
       >
-        <div class="flex flex-col justify-center max-w-[22em] pl-[2.5em]">
-          <h2 class="font-bold text-[3em] pb-[1em] leading-[1em]">
-            <span class="font-bold gradient">Get our</span>
-            presentation
-          </h2>
-          <p class="font-light pr-[1em] join-text pb-[1.8em]">
-            Here we have compiled all the key metrics and perspectives of the PlayWallet platform
-          </p>
+        <div
+          class="h-full flex flex-col items-center justify-between lg:justify-center lg:max-w-[22em] pt-[3em] pb-[2.5em] px-[1.7em] lg:pl-[2.5em]"
+        >
+          <div>
+            <h2
+              class="font-bold text-[2em] lg:text-[3em] pb-[0.5em] lg:pb-[1em] leading-[1em] tracking-tighter"
+            >
+              <span class="font-bold gradient">Get our</span>
+              presentation
+            </h2>
+            <p
+              class="font-light text-[0.9em] lg:text-[1em] text-center lg:text-left pr-[1em] pb-[1.8em]"
+            >
+              Here we have compiled all the key metrics and perspectives of the PlayWallet platform
+            </p>
+          </div>
           <div class="flex gap-4 items-center">
             <img class="w-[2em]" src="@/assets/img/pdf.png" />
             <base-button outlines>Download our Pitchdeck</base-button>
@@ -41,11 +49,18 @@ import BaseButton from '@/components/base/BaseButton.vue'
   }
 }
 .present-bg {
-  width: calc(var(--index) * 43.3);
-  height: calc(var(--index) * 16.36);
+  width: calc(var(--index) * 26);
+  height: calc(var(--index) * 50);
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(@/assets/img/presentation-bg.png);
+  background-image: url(@/assets/img/presentation-m-bg.png);
+  @media (min-width: 768px) {
+    width: calc(var(--index) * 43.3);
+    height: calc(var(--index) * 16.36);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(@/assets/img/presentation-bg.png);
+  }
 }
 .gradient {
   color: transparent;
