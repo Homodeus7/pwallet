@@ -7,7 +7,7 @@
       <div
         v-if="menu"
         ref="dropdown"
-        class="w-[80vw] h-[100vh] fixed right-0 top-0 bg-[#0c0c14] rounded-l-[1.4em] flex flex-col items-start px-[1.25em] py-[4rem]"
+        class="w-[80vw] h-[100vh] fixed right-0 top-0 bg-[#0c0c14] rounded-l-[1.4em] flex flex-col items-start px-[1.25em] py-[4rem] z-50"
       >
         <div class="w-full flex justify-between pb-[3.5em]">
           <router-link to="/">

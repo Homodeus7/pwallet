@@ -6,7 +6,7 @@
     </div>
     <img
       class="absolute bottom-[36%] translate-y-[50%] right-[33%] translate-x-[50%] z-100 sphere"
-      src="@/assets/img/sphere_login.png"
+      src="@/assets/img/login-sphere.png"
       alt="hero-sphere"
     />
   </div>

@@ -6,7 +6,6 @@ export interface ButtonProps {
   disabled?: boolean
   primary?: boolean
   special?: boolean
-  bspecial?: boolean
   connect?: boolean
   outlines?: boolean
   white?: boolean
@@ -88,7 +87,7 @@ button {
     }
   }
   &.special {
-    padding: 0.7em 1.7em;
+    padding: 0.4em 1.4em;
     font-size: 0.8em;
     font-weight: normal;
     color: white;
@@ -99,6 +98,7 @@ button {
     text-decoration: none;
     transition: all linear $timeout;
     @media (min-width: 768px) {
+      padding: 0.7em 1.7em;
       transition: all linear $timeout;
       &:hover {
         opacity: 0.8;
@@ -110,45 +110,19 @@ button {
     &::before {
       content: '';
       position: absolute;
-      width: 113%;
+      width: 111%;
       height: 135%;
-      left: -0.55em;
-      bottom: -0.5em;
+      left: -0.47em;
+      bottom: -0.4em;
       border-radius: 3.75em;
       border: 1px solid #303030;
-    }
-  }
-  &.bspecial {
-    padding: 0.7em 1.7em;
-    font-size: 0.8em;
-    font-weight: normal;
-    color: white;
-    background: #272727;
-    border-radius: 3.125em;
-    text-align: center;
-    border: 1px solid #3d3d3d;
-    text-decoration: none;
-    transition: all linear $timeout;
-    z-index: 1;
-    @media (min-width: 768px) {
-      transition: all linear $timeout;
-      &:hover {
-        opacity: 0.8;
+      @media (min-width: 768px) {
+        width: 113%;
+        height: 135%;
+        left: -0.55em;
+        bottom: -0.5em;
+        border-radius: 3.75em;
       }
-      &:active {
-        opacity: 0.7;
-      }
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      width: 107%;
-      height: 135%;
-      left: -0.55em;
-      bottom: -0.5em;
-      z-index: -1;
-      border-radius: 3.75em;
-      border: 1px solid #303030;
     }
   }
   &.white {

@@ -2,9 +2,14 @@
   <div class="h-[100vh] bg-black rounded-b-[6em] background-img relative">
     <div class="wrapper m-auto flex flex-col">
       <HeaderSection />
-      <!-- <div data-scroll data-scroll-direction="vertical" data-scroll-speed="6" class="mt-[6em]">
+      <div
+        data-scroll
+        data-scroll-direction="vertical"
+        data-scroll-speed="6"
+        class="mt-[3em] lg:mt-[6em]"
+      >
         <HeroSlider />
-      </div> -->
+      </div>
     </div>
     <img
       data-scroll
@@ -15,8 +20,8 @@
       alt="hero-sphere"
     />
     <img
-      class="absolute bottom-0 right-[50%] translate-x-[50%] z-100 sphere hidden lg:block"
-      src="@/assets/img/hero-sphere.png"
+      class="absolute bottom-[5%] translate-y-[5%] lg:bottom-0 right-[50%] translate-x-[50%] z-100 sphere"
+      src="@/assets/img/login-sphere.png"
       alt="hero-sphere"
     />
     <BaseSocial
@@ -44,7 +49,10 @@ import BaseSocial from '@/components/base/BaseSocial.vue'
   }
 }
 .sphere {
-  width: calc(var(--index) * var(--side-img));
+  width: calc(var(--index) * 24);
+  @media (min-width: 768px) {
+    width: calc(var(--index) * var(--side-img));
+  }
 }
 .background-img {
   @media (min-width: 768px) {
