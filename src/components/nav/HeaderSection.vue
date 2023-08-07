@@ -3,7 +3,7 @@
     <nav>
       <div class="flex items-center justify-between min-h-[6em]">
         <router-link to="/">
-          <img class="w-[8em] lg:w-[13em]" src="@/assets/logo.png" />
+          <img class="w-[8em] lg:w-[10.5em]" src="@/assets/logo.png" />
         </router-link>
         <header-links class="hidden lg:flex" />
         <base-button special class="ml-[3em] lg:ml-0">Launch app</base-button>

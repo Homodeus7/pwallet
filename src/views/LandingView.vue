@@ -1,5 +1,5 @@
 <template>
-  <main ref="container">
+  <main ref="container" class="main-bg">
     <HeroSection data-scroll-section />
     <JoinSection data-scroll-section />
     <RoadmapSection data-scroll-section />
@@ -32,3 +32,11 @@ onMounted(() => {
   setLocomotiveScroll()
 })
 </script>
+<style lang="scss">
+.main-bg {
+  background: linear-gradient(to right, #b467c5, #e067a8);
+  @media (min-width: 768px) {
+    background: linear-gradient(to right, #e067a8, #8e67e0);
+  }
+}
+</style>

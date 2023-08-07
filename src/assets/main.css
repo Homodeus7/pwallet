@@ -35,14 +35,6 @@
   font-weight: normal;
   -webkit-tap-highlight-color: transparent;
 }
-body {
-  background: linear-gradient(to right, #b467c5, #e067a8);
-}
-@media (min-width: 768px) {
-  body {
-    background: linear-gradient(to right, #e067a8, #8e67e0);
-  }
-}
 
 /* locomotive scroll styles */
 

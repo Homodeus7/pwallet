@@ -13,14 +13,6 @@ const router = createRouter({
       }
     },
     {
-      path: '/dashbroad',
-      name: 'dashboard',
-      component: () => import('@/views/DashboardView.vue'),
-      meta: {
-        layout: 'dashbroad'
-      }
-    },
-    {
       path: '/login',
       name: 'login',
       component: () => import('@/views/LoginView.vue'),
@@ -34,6 +26,14 @@ const router = createRouter({
       component: () => import('@/views/RegistrationView.vue'),
       meta: {
         layout: 'landing'
+      }
+    },
+    {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: () => import('@/views/DashboardView.vue'),
+      meta: {
+        layout: 'dashboard'
       }
     }
   ]
