@@ -19,8 +19,8 @@
             crypto market according to uour preferences.
           </p>
           <div class="flex flex-col lg:flex-row gap-4 w-full lg:max-w-[25.25em] px-[1em]">
-            <base-button white class="w-full"> Get started </base-button>
-            <base-button outlines class="w-full"> Learn more </base-button>
+            <base-button white class="w-full" @click="login"> Get started </base-button>
+            <base-button outlines class="w-full" @click="singin"> Learn more </base-button>
           </div>
         </div>
       </swiper-slide>
@@ -34,7 +34,13 @@ import { Pagination, A11y } from 'swiper/modules'
 import 'swiper/css/pagination'
 import 'swiper/css'
 import BaseButton from '@/components/base/BaseButton.vue'
+import { useRouter } from 'vue-router'
+
 const modules = [Pagination, A11y]
+const router = useRouter()
+
+const login = () => router.push('/login')
+const singin = () => router.push('/registration')
 </script>
 
 <style lang="scss">

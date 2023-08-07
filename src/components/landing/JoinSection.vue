@@ -35,7 +35,7 @@
             </div>
           </div>
           <img
-            class="absolute -bottom-[45%] lg:-bottom-[35%] lg:-left-[10%] z-100 spike"
+            class="absolute -bottom-[45%] lg:-bottom-[55%] lg:-left-[10%] z-100 spike"
             src="@/assets/img/join-spike.png"
             alt="hero-sphere"
           />

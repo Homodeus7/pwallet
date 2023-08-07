@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav>
-      <div class="flex items-center justify-between min-h-[100px]">
+      <div class="flex items-center justify-between min-h-[6em]">
         <router-link to="/">
           <img class="w-[8em] lg:w-[13em]" src="@/assets/logo.png" />
         </router-link>

@@ -15,14 +15,12 @@
       data-scroll
       data-scroll-direction="vertical"
       data-scroll-speed="4"
-      class="absolute bottom-[25%] right-[7%] z-[-1] hidden lg:block"
+      class="absolute bottom-[25%] right-[7%] z-[-1] hidden lg:block hero_decor"
       src="@/assets/img/hero_decor.png"
-      alt="hero-sphere"
     />
     <img
       class="absolute bottom-[5%] translate-y-[5%] lg:-bottom-[65%] lg:-translate-y-[65%] right-[50%] translate-x-[50%] z-100 sphere"
       src="@/assets/img/login-sphere.png"
-      alt="hero-sphere"
     />
     <BaseSocial
       data-scroll
@@ -46,6 +44,11 @@ import BaseSocial from '@/components/base/BaseSocial.vue'
   padding: 0 1em;
   @media (min-width: 768px) {
     width: var(--container-width);
+  }
+}
+.hero_decor {
+  @media (min-width: 768px) {
+    width: calc(var(--index) * 55);
   }
 }
 .sphere {

@@ -1,6 +1,6 @@
 <template>
   <div class="h-[70vh] lg:h-[80vh]">
-    <div class="wrapper m-auto h-full flex items-center justify-center">
+    <div class="wrapper m-auto h-full flex items-center justify-center mt-[4em]">
       <div
         data-scroll
         data-scroll-repeat="true"
