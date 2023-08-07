@@ -1,6 +1,6 @@
 <template>
-  <div class="h-[70vh] lg:h-[80vh]">
-    <div class="wrapper m-auto h-full flex items-center justify-center mt-[4em]">
+  <div class="lg:h-[80vh]">
+    <div class="wrapper m-auto h-full flex items-center justify-center mt-[4em] mb-[8em]">
       <div
         data-scroll
         data-scroll-repeat="true"
@@ -49,8 +49,8 @@ import BaseButton from '@/components/base/BaseButton.vue'
   }
 }
 .present-bg {
-  width: calc(var(--index) * 26);
-  height: calc(var(--index) * 50);
+  width: calc(var(--index) * 26.05);
+  height: calc(var(--index) * 50.5);
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(@/assets/img/presentation-m-bg.png);

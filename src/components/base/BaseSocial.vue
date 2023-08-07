@@ -11,7 +11,7 @@
     </a>
   </div>
   <div v-else class="flex flex-col gap-[0.3em]">
-    <span class="font-light text-[0.9em] text-[#FFF]/[30%]">Socials</span>
+    <span class="font-light text-[0.9em] text-[#FFF]/[30%]">Social</span>
     <div
       class="min-w-max flex p-[0.3em] gap-[1.5em] rounded-[3.5em] border-[1px]"
       :class="[
