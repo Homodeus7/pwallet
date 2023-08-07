@@ -1,7 +1,7 @@
 <template>
   <div class="h-[73vh] lg:h-[100vh] bg-black rounded-[3em] lg:rounded-[6em] relative">
     <img
-      class="absolute -bottom-[20%] translate-y-[20%] right-[50%] translate-x-[50%] lg:-bottom-[10%] lg:translate-y-[10%] lg:right-[20%] lg:translate-x-[20%] z-100 iphone"
+      class="absolute -bottom-[21%] translate-y-[21%] right-[50%] translate-x-[50%] lg:-bottom-[10%] lg:translate-y-[10%] lg:right-[20%] lg:translate-x-[20%] z-100 iphone"
       src="@/assets/img/iphone.png"
       alt="iphone-image"
     />
@@ -81,9 +81,10 @@ const results = reactive([
 }
 .iphone {
   width: calc(var(--index) * 18);
-  filter: drop-shadow(-10mm 17mm 10mm rgba(0, 0, 0, 0.6));
+
   @media (min-width: 768px) {
     width: calc(var(--index) * 14);
+    filter: drop-shadow(-10mm 17mm 10mm rgba(0, 0, 0, 0.6));
   }
 }
 .spike {

@@ -19,6 +19,10 @@
       src="@/assets/img/hero_decor.png"
     />
     <img
+      class="absolute top-0 left-[5%] lg:hidden hero_decor"
+      src="@/assets/img/hero_decor_m.png"
+    />
+    <img
       class="absolute bottom-[5%] translate-y-[5%] lg:-bottom-[65%] lg:-translate-y-[65%] right-[50%] translate-x-[50%] z-100 sphere"
       src="@/assets/img/login-sphere.png"
     />
@@ -47,6 +51,7 @@ import BaseSocial from '@/components/base/BaseSocial.vue'
   }
 }
 .hero_decor {
+  width: calc(var(--index) * 26);
   @media (min-width: 768px) {
     width: calc(var(--index) * 55);
   }

@@ -45,12 +45,12 @@
         <BaseSocial background wborder class="items-center lg:items-start pt-[1em] lg:pt-0" />
       </div>
       <div
-        class="w-full flex flex-col lg:flex-row items-center justify-end lg:justify-between h-[4em]"
+        class="w-full flex flex-col lg:flex-row items-center justify-end lg:justify-between gap-[0.5em] h-[5em] lg:h-[4em]"
       >
-        <span class="font-thin text-[0.7em] lg:text-[0.9em] text-[#FFF]/[84%]">
+        <span class="font-thin text-[0.6em] lg:text-[0.9em] text-[#FFF]/[84%]">
           © 2023 PlayWallet. All right reserved.
         </span>
-        <span class="font-thin text-[0.7em] lg:text-[0.9em] text-[#FFF]/[84%]">
+        <span class="font-thin text-[0.6em] lg:text-[0.9em] text-[#FFF]/[84%]">
           Terms & Conditions
         </span>
       </div>

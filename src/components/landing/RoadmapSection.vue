@@ -18,7 +18,7 @@
             <div
               class="absolute w-[1px] top-[50%] lg:top-0 lg:right-4 h-[70%] lg:h-[160%] bg-[#D9D9D9]/[30%]"
             ></div>
-            <p class="text-[1.1em] text-[#FFF]/[60%]" :class="event.class">
+            <p class="text-[1.15em] text-[#FFF]/[60%]" :class="event.class">
               {{ event.date }}
             </p>
             <div
