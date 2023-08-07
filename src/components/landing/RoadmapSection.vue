@@ -28,7 +28,7 @@
                   'bg-[#FFF] text-[#282F42]': !event.started
                 }
               ]"
-              class="event lg:text-[1.2em] h-[4.5em] px-[1em] ml-[1em] rounded-[1em] flex items-center justify-center gap-[0.6em]"
+              class="event lg:text-[1.2em] h-[4.5em] lg:h-[3.5em] px-[1em] ml-[1em] rounded-[1em] flex items-center justify-center gap-[0.6em]"
             >
               <span>
                 {{ event.name }}

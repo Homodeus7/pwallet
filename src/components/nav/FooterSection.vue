@@ -42,7 +42,7 @@
             <span class="font-thin">{{ link.name }}</span>
           </a>
         </div>
-        <BaseSocial background wborder class="items-center pt-[1em] lg:pt-0" />
+        <BaseSocial background wborder class="items-center lg:items-start pt-[1em] lg:pt-0" />
       </div>
       <div
         class="w-full flex flex-col lg:flex-row items-center justify-end lg:justify-between h-[4em]"
