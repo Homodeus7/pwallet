@@ -1,11 +1,9 @@
 <template>
   <SidebarNav />
-  <div class="pl-[322px]">
-    <HeaderNav />
-    <main class="main-bg">
-      <RouterView class="h-full" />
-    </main>
-  </div>
+  <HeaderNav />
+  <main class="main-bg">
+    <RouterView />
+  </main>
 </template>
 
 <script lang="ts" setup>
@@ -16,6 +14,8 @@ import { RouterView } from 'vue-router'
 <style lang="scss" scoped>
 .main-bg {
   height: 100%;
+  width: 100%;
+  margin-left: 322px;
   background: #161616;
 }
 </style>

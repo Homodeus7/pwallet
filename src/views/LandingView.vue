@@ -1,5 +1,5 @@
 <template>
-  <main ref="container" class="main-bg">
+  <main ref="container" data-scroll-container class="main-bg">
     <HeroSection data-scroll-section />
     <JoinSection data-scroll-section />
     <RoadmapSection data-scroll-section />

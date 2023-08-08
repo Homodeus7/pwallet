@@ -141,10 +141,10 @@ button {
     }
   }
   &.outlines {
-    padding: 0.9em 1.2em;
+    padding: 0.75em 1.2em;
     background: transparent;
     color: white;
-    border: 1px solid #3d3d3d;
+    border: 1.5px solid #3d3d3d;
     @media (min-width: 768px) {
       transition: all linear $timeout;
       &:hover {
