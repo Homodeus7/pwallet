@@ -1,6 +1,6 @@
 <template>
-  <header>
-    <div class="header flex justify-between">
+  <header class="header">
+    <div class="w-full flex justify-between pl-[322px]">
       <div>
         <h2 class="font-medium text-2xl">Hello world!</h2>
         <p class="text-sm text-[#9f9f9f]">This is your own PW Dashboard.</p>
@@ -15,14 +15,12 @@ import AccountNav from '@/components/dashboard/nav/AccountNav.vue'
 <style lang="scss" scoped>
 .header {
   position: fixed;
+  width: 100%;
   background: #0f0f0f;
   border-bottom: 2px solid #2b2e41;
-  margin-left: 322px;
-  padding: 0 50px 0 30px;
-  height: 124px;
+  padding: 35px 50px 35px 30px;
   display: flex;
   align-items: center;
-  z-index: 1;
-  position: relative;
+  z-index: 20;
 }
 </style>

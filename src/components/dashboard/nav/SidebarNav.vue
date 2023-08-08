@@ -64,13 +64,13 @@ const links = reactive([
       {
         name: 'PlayW',
         href: '/playw',
-        img: 'shop.svg'
+        img: 'strongbox.svg'
       },
       { name: 'NFT', href: '/nft', img: 'gallery.svg' }
     ],
     play_models: [{ name: 'Market Masters', href: '/market', img: 'shop.svg' }],
     dashboard: [{ name: 'Project Overview', href: '/project', img: 'category.svg' }],
-    dao: [{ name: 'Proposals', href: '/proposals', img: 'category.svg' }]
+    dao: [{ name: 'Proposals', href: '/proposals', img: 'chart-success.svg' }]
   }
 ])
 </script>
@@ -86,7 +86,7 @@ const links = reactive([
   width: 322px;
   padding: 20px 46px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
-  z-index: 10;
+  z-index: 50;
   &__link {
     display: flex;
     gap: 16px;

@@ -31,9 +31,7 @@
               <span class="font-thin text-sm text-[#8A8AA9]">{{
                 shortAddress(account.wallet, 10, 6)
               }}</span>
-              <span v-if="copied" v-auto-animate class="absolute text-xs right-0 -top-4"
-                >Copied!</span
-              >
+              <span v-if="copied" class="absolute text-xs right-0 -top-4">Copied!</span>
               <CopyIcon class="cursor-pointer" @click="copyText()" />
             </div>
 
@@ -43,9 +41,11 @@
       </div>
     </Transition>
     <div
-      class="w-[52px] h-[52px] flex items-center justify-center rounded-full border border-[#2B2E41]"
+      class="w-[52px] h-[52px] flex items-center justify-center rounded-full border border-[#2B2E41] cursor-pointer"
+      @click="active = !active"
     >
-      <img src="@/assets/icon/notification.svg" />
+      <img v-if="active" src="@/assets/icon/notification-active.svg" />
+      <img v-else src="@/assets/icon/notification.svg" />
     </div>
     <base-button outlines>
       Log out
@@ -67,6 +67,7 @@ const dropdown = ref<HTMLElement | null>(null)
 
 onClickOutside(dropdown, () => (menu.value = false))
 
+const active = ref(false)
 const account = ref({
   name: 'Jhon Doe',
   adress: '@jhondoe',

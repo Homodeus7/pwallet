@@ -12,7 +12,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import HeaderNav from '@/components/nav/HeaderNav.vue'
+import HeaderNav from '@/components/landing/nav/HeaderNav.vue'
 import RegistrationForm from '@/components/inputs/RegistrationForm.vue'
 </script>
 

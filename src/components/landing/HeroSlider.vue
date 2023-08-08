@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>slider</h1>
     <swiper
       :modules="modules"
       :slides-per-view="1"
@@ -58,8 +59,8 @@ const singin = () => router.push('/registration')
 }
 .swiper-pagination-bullet {
   opacity: 1;
-  height: 10px;
-  width: 10px;
+  height: 12px;
+  width: 12px;
   border: 1px solid #424242;
 }
 .swiper-pagination-bullet {

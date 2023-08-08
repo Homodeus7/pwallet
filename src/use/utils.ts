@@ -86,4 +86,6 @@ export const shortAddress = (str: string, start = 6, end = start - 2) => {
   return str.slice(0, start) + '...' + str.slice(-end)
 }
 
+export const toReduction = (price: number) => (price < 1 ? price.toPrecision(2) : price.toFixed(2))
+
 export const nowInSeconds = () => Math.floor(Date.now() / 1000)
