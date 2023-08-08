@@ -1,6 +1,7 @@
 <template>
   <header class="header">
     <router-link to="/dashboard">Hello world!</router-link>
+    <div></div>
   </header>
 </template>
 

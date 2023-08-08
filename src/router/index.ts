@@ -35,6 +35,22 @@ const router = createRouter({
       meta: {
         layout: 'dashboard'
       }
+    },
+    {
+      path: '/playw',
+      name: 'playw',
+      component: () => import('@/components/dashboard/PlayW.vue'),
+      meta: {
+        layout: 'dashboard'
+      }
+    },
+    {
+      path: '/nft',
+      name: 'nft',
+      component: () => import('@/components/dashboard/NFT.vue'),
+      meta: {
+        layout: 'dashboard'
+      }
     }
   ]
 })

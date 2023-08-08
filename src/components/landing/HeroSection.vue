@@ -1,7 +1,7 @@
 <template>
   <div class="h-[100vh] bg-black rounded-b-[3em] lg:rounded-b-[6em] background-img relative">
     <div class="wrapper m-auto flex flex-col">
-      <HeaderSection />
+      <HeaderNav class="z-50" />
       <div
         data-scroll
         data-scroll-direction="vertical"
@@ -12,14 +12,11 @@
       </div>
     </div>
     <img
-      data-scroll
-      data-scroll-direction="vertical"
-      data-scroll-speed="4"
-      class="absolute bottom-[25%] right-[7%] z-[-1] hidden lg:block hero_decor"
+      class="absolute bottom-[10%] right-[7%] hidden lg:block -z-10 hero_decor"
       src="@/assets/img/hero_decor.png"
     />
     <img
-      class="absolute top-0 left-[5%] lg:hidden hero_decor"
+      class="absolute top-0 left-[5%] lg:hidden -z-10 hero_decor"
       src="@/assets/img/hero_decor_m.png"
     />
     <img
@@ -36,7 +33,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import HeaderSection from '@/components/nav/HeaderSection.vue'
+import HeaderNav from '@/components/landing/nav/HeaderNav.vue'
 import HeroSlider from '@/components/landing/HeroSlider.vue'
 import BaseSocial from '@/components/base/BaseSocial.vue'
 </script>

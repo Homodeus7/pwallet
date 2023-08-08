@@ -1,7 +1,7 @@
 <template>
   <div class="h-[100vh] bg-black rounded-b-[6em] relative background-img overflow-hidden">
     <div class="wrapper h-full m-auto flex flex-col">
-      <HeaderSection />
+      <HeaderNav />
       <RegistrationForm />
     </div>
     <img
@@ -12,7 +12,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import HeaderSection from '@/components/nav/HeaderSection.vue'
+import HeaderNav from '@/components/nav/HeaderNav.vue'
 import RegistrationForm from '@/components/inputs/RegistrationForm.vue'
 </script>
 

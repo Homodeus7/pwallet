@@ -4,7 +4,7 @@
     <JoinSection data-scroll-section />
     <RoadmapSection data-scroll-section />
     <PresentationSection data-scroll-section />
-    <FooterSection data-scroll-section />
+    <FooterNav data-scroll-section />
   </main>
 </template>
 
@@ -13,7 +13,7 @@ import HeroSection from '@/components/landing/HeroSection.vue'
 import JoinSection from '@/components/landing/JoinSection.vue'
 import RoadmapSection from '@/components/landing/RoadmapSection.vue'
 import PresentationSection from '@/components/landing/PresentationSection.vue'
-import FooterSection from '@/components/nav/FooterSection.vue'
+import FooterNav from '@/components/landing/nav/FooterNav.vue'
 
 import { ref, onMounted } from 'vue'
 import LocomotiveScroll from 'locomotive-scroll'
@@ -32,7 +32,7 @@ onMounted(() => {
   setLocomotiveScroll()
 })
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .main-bg {
   background: linear-gradient(to right, #b467c5, #e067a8);
   @media (min-width: 768px) {
