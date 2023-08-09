@@ -8,8 +8,8 @@
           <span class="text-[#93989A]">Distribute of 20% of the platform profits</span>
         </div>
         <div class="flex gap-5">
-          <base-button primary>Buy</base-button>
-          <div class="flex flex-col w-full">
+          <base-button primary class="w-[7.5em]">Buy</base-button>
+          <div class="flex flex-col">
             <span class="text-xs text-[#93989A]">Price:</span>
             <div class="flex">
               <img src="@/assets/icon/ethereum.svg" />

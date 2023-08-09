@@ -33,8 +33,10 @@ import 'swiper/css'
 import { reactive, ref } from 'vue'
 
 const modules = [Pagination, A11y, Navigation]
+
 const prev = ref(null)
 const next = ref(null)
+
 const nfts = reactive([
   { name: 'NFT Name_1', author: 'NFT Author', price: 19.123123, img: 'nft_1.png' },
   { name: 'NFT Name_2', author: 'NFT Author', price: 0.00000123123, img: 'nft_2.png' },

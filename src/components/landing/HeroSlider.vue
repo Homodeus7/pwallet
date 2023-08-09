@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>slider</h1>
     <swiper
       :modules="modules"
       :slides-per-view="1"

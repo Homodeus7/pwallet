@@ -6,7 +6,7 @@
         data-scroll
         data-scroll-direction="vertical"
         data-scroll-speed="6"
-        class="mt-[3em] lg:mt-[6em]"
+        class="mt-[3em] lg:mt-[10em]"
       >
         <hero-slider />
       </div>
