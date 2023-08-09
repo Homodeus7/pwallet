@@ -3,7 +3,7 @@
     <button @click="menu = true">
       <img src="@/assets/icon/burger.svg" />
     </button>
-    <Transition name="visible">
+    <transition name="visible">
       <div
         v-if="menu"
         ref="dropdown"
@@ -19,12 +19,12 @@
         </div>
         <header-links class="flex-col items-start text-[1.3em]" />
         <div class="w-full h-full flex flex-col justify-end gap-[1em]">
-          <BaseSocial oborder class="w-min pb-[3em]" />
+          <base-social oborder class="w-min pb-[3em]" />
           <base-button white class="w-full">Sign in</base-button>
           <base-button outlines class="w-full">Log in</base-button>
         </div>
       </div>
-    </Transition>
+    </transition>
   </div>
 </template>
 <script lang="ts" setup>

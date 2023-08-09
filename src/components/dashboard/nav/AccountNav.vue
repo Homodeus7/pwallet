@@ -9,7 +9,7 @@
         <div class="text-sm text-[#93989A]">{{ account.adress }}</div>
       </div>
     </div>
-    <Transition name="visible">
+    <transition name="visible">
       <div
         v-if="menu"
         ref="dropdown"
@@ -32,14 +32,14 @@
                 shortAddress(account.wallet, 10, 6)
               }}</span>
               <span v-if="copied" class="absolute text-xs right-0 -top-4">Copied!</span>
-              <CopyIcon class="cursor-pointer" @click="copyText()" />
+              <copy-icon class="cursor-pointer" @click="copyText()" />
             </div>
 
             <div class="font-thin text-sm">{{ account.email }}</div>
           </div>
         </div>
       </div>
-    </Transition>
+    </transition>
     <div
       class="w-[52px] h-[52px] flex items-center justify-center rounded-full border border-[#2B2E41] cursor-pointer"
       @click="active = !active"

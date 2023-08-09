@@ -1,10 +1,10 @@
 <template>
   <main ref="container" data-scroll-container class="main-bg">
-    <HeroSection data-scroll-section />
-    <JoinSection data-scroll-section />
-    <RoadmapSection data-scroll-section />
-    <PresentationSection data-scroll-section />
-    <FooterNav data-scroll-section />
+    <hero-section data-scroll-section />
+    <join-section data-scroll-section />
+    <roadmap-section data-scroll-section />
+    <presentation-section data-scroll-section />
+    <footer-nav data-scroll-section />
   </main>
 </template>
 

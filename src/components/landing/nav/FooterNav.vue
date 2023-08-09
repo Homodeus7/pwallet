@@ -27,7 +27,7 @@
           PlayWallet combines Web3's most comprehensive tools for creating and scaling your
           crypto-assets
         </p>
-        <BaseSocial big />
+        <base-social big />
       </div>
       <div
         class="w-full flex flex-col lg:flex-row items-center justify-between bg-[#CAC6FF]/[10%] py-[2em] px lg:pl-[2.5em] lg:pr-[9.3em] lg:py-[4em] rounded-[1.3em] lg:rounded-[2.7em] gap-[3em] lg:gap-[15.5em] backdrop-blur-sm"
@@ -42,7 +42,7 @@
             <span class="font-thin">{{ link.name }}</span>
           </a>
         </div>
-        <BaseSocial background wborder class="items-center lg:items-start pt-[1em] lg:pt-0" />
+        <base-social background wborder class="items-center lg:items-start pt-[1em] lg:pt-0" />
       </div>
       <div
         class="w-full flex flex-col lg:flex-row items-center justify-end lg:justify-between gap-[0.5em] h-[5em] lg:h-[4em]"

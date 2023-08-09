@@ -3,12 +3,12 @@
     <div class="flex justify-between">
       <div class="w-full flex flex-col justify-between">
         <img class="absolute w-min" :src="`/icons/${props.icon}`" />
-        <div class="flex flex-col pt-[160px]">
+        <div class="flex flex-col gap-2 pt-[160px] pb-6">
           <h4 class="font-medium text-xl">{{ props.name }}</h4>
           <span class="text-[#93989A]">Distribute of 20% of the platform profits</span>
         </div>
-        <div class="flex justify-between">
-          <base-button primary>Sell</base-button>
+        <div class="flex gap-5">
+          <base-button primary>Buy</base-button>
           <div class="flex flex-col w-full">
             <span class="text-xs text-[#93989A]">Price:</span>
             <div class="flex">
@@ -24,7 +24,7 @@
           <img class="" :src="`${props.img}`" />
         </div>
       </div>
-      <img class="absolute -top-10 -right-14 w-[320px] z-0 opacity-30" :src="`${props.img}`" />
+      <img class="absolute -top-2 -right-16 w-[340px] z-0 opacity-30" :src="`${props.img}`" />
     </div>
   </base-card>
 </template>

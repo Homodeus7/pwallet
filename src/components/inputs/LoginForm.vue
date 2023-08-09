@@ -4,17 +4,17 @@
       <h2 class="font-medium text-[3em] leading-[1em]">Log In</h2>
       <span class="text-[#8D98AF] text-[1.2em]">Welcome back, you’ve been missed!</span>
     </div>
-    <BaseButton connect class="w-full flex items-center justify-center">
+    <base-button connect class="w-full flex items-center justify-center">
       <span class="ml-[0.8em]">Connect Wallet</span>
       <template v-slot:prefix-icon>
         <img src="@/assets/icon/coinbase.svg" />
         <img class="-ml-4" src="@/assets/icon/metamask.png" />
         <img class="-ml-4" src="@/assets/icon/phantom.png" />
       </template>
-    </BaseButton>
-    <DecorText>OR</DecorText>
+    </base-button>
+    <decor-text>OR</decor-text>
     <div class="flex flex-col gap-[1.5em]">
-      <BaseInput
+      <base-input
         v-model="valid.email.value"
         :is-valid="Boolean(!valid.eError.value)"
         placeholder="Email"
@@ -23,8 +23,8 @@
         <template v-slot:prefix-icon>
           <img src="@/assets/icon/email.svg" />
         </template>
-      </BaseInput>
-      <BaseInput
+      </base-input>
+      <base-input
         :password="showPassword"
         v-model="valid.password.value"
         :error-message="valid.pError.value"
@@ -40,10 +40,10 @@
             <img v-show="showPassword" src="@/assets/icon/show.svg" />
           </Button>
         </template>
-      </BaseInput>
+      </base-input>
     </div>
     <div class="flex justify-between">
-      <BaseCheckbox
+      <base-checkbox
         label="Remember me"
         id="checkboxActive"
         name="checkboxActive"
@@ -54,7 +54,7 @@
         <span class="text-[#6271EB]">Forgot password?</span>
       </a>
     </div>
-    <BaseButton primary :disabled="!isValid" class="w-full"> Log In </BaseButton>
+    <base-button primary :disabled="!isValid" class="w-full"> Log In </base-button>
     <div class="flex gap-2">
       <span class="text-[#8d98af]">Don't have an account? </span>
       <router-link to="registration">

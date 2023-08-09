@@ -1,14 +1,14 @@
 <template>
   <div class="h-[100vh] bg-black rounded-b-[3em] lg:rounded-b-[6em] background-img relative">
     <div class="wrapper m-auto flex flex-col">
-      <HeaderNav class="z-50" />
+      <header-nav class="z-50" />
       <div
         data-scroll
         data-scroll-direction="vertical"
         data-scroll-speed="6"
         class="mt-[3em] lg:mt-[6em]"
       >
-        <HeroSlider />
+        <hero-slider />
       </div>
     </div>
     <img
@@ -23,7 +23,7 @@
       class="absolute bottom-[5%] translate-y-[5%] lg:-bottom-[65%] lg:-translate-y-[65%] right-[50%] translate-x-[50%] z-100 sphere"
       src="@/assets/img/login-sphere.png"
     />
-    <BaseSocial
+    <base-social
       data-scroll
       data-scroll-direction="vertical"
       data-scroll-speed="2"

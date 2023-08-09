@@ -5,7 +5,7 @@
         <h2 class="font-medium text-2xl">Hello world!</h2>
         <p class="text-sm text-[#9f9f9f]">This is your own PW Dashboard.</p>
       </div>
-      <AccountNav />
+      <account-nav />
     </div>
   </header>
 </template>

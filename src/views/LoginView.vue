@@ -1,8 +1,8 @@
 <template>
   <div class="h-[100vh] bg-black rounded-b-[6em] background-img relative">
     <div class="wrapper h-full m-auto flex flex-col">
-      <HeaderNav />
-      <LoginForm />
+      <header-nav />
+      <login-form />
     </div>
     <img
       class="absolute bottom-[36%] translate-y-[50%] right-[33%] translate-x-[50%] z-100 sphere"
