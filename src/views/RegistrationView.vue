@@ -13,7 +13,7 @@
 </template>
 <script lang="ts" setup>
 import HeaderNav from '@/components/landing/nav/HeaderNav.vue'
-import RegistrationForm from '@/components/inputs/RegistrationForm.vue'
+import RegistrationForm from '@/components/forms/RegistrationForm.vue'
 </script>
 
 <style lang="scss" scoped>
