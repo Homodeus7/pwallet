@@ -1,5 +1,5 @@
 <template>
-  <base-card color="#242634" radius="16px">
+  <base-card color="#242634" padding="16px" radius="16px">
     <div class="flex flex-col gap-[2em]">
       <div class="w-full rounded-xl">
         <img class="w-full first:bg-cover" :src="`/nfts/${props.img}`" />

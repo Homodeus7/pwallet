@@ -70,7 +70,7 @@ button {
   }
   transition: all linear $timeout;
   &.primary {
-    padding: 0.7em 1.7em;
+    padding: 0.8em 1.7em;
     background: #6271eb;
     color: white;
     border: 0;
