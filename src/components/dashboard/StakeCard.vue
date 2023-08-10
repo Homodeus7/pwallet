@@ -1,18 +1,32 @@
 <template>
-  <div>
-    <h2 class="font-medium text-3xl mb-[1.5em]">Stake</h2>
-    <base-card color="#242731" radius="16px" padding="24px" class="flex flex-col gap-[1em]">
-      <base-input label="You give PlayW" isValid background labelThin />
-      <div class="flex gap-[1em]">
-        <base-max-input
-          label="Months"
-          isValid
-          background
-          labelThin
-          max-value="20"
-          v-model="months"
-        />
-        <base-max-input label="Days" isValid background labelThin max-value="13" v-model="days" />
+  <div class="h-full">
+    <h2 class="font-medium text-3xl mb-[1em]">Stake</h2>
+    <base-card
+      color="#242731"
+      radius="16px"
+      padding="24px"
+      class="h-[360px] flex flex-col justify-between"
+    >
+      <div class="flex flex-col justify-between gap-[0.8em]">
+        <base-input label="You give PlayW" isValid background labelThin>
+          <template v-slot:coin-icon>
+            <div class="flex gap-2">
+              <img src="@/assets/icon/playw.svg" />
+              <span class="font-medium text-[0.9em]">PlayW</span>
+            </div>
+          </template>
+        </base-input>
+        <div class="flex gap-[1em]">
+          <base-max-input
+            label="Months"
+            isValid
+            background
+            labelThin
+            max-value="20"
+            v-model="months"
+          />
+          <base-max-input label="Days" isValid background labelThin max-value="13" v-model="days" />
+        </div>
       </div>
       <base-button primary>Stake</base-button>
     </base-card>

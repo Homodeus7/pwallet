@@ -83,7 +83,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .label-thin {
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: #9ca2aa;
   font-weight: 300;
 }

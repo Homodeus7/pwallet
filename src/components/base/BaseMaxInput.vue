@@ -74,7 +74,7 @@ watch(
 
 <style lang="scss" scoped>
 .label-thin {
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: #9ca2aa;
   font-weight: 300;
 }
@@ -88,7 +88,7 @@ input[type='text'],
 input[type='password'] {
   font-size: 16px;
   color: white;
-  padding: 0.7em 1em 0.7em 1em;
+  padding: 0.8em 1em 0.8em 1em;
   margin-top: 12px;
   outline: none;
   &::placeholder {

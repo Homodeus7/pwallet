@@ -2,7 +2,7 @@
   <div class="py-[70px] mx-auto max-w-[1200px]">
     <div class="flex flex-col justify-between">
       <my-assets />
-      <div class="grid grid-cols-2 grid-rows-1 gap-6 items-stretch pb-[3em]">
+      <div class="grid grid-cols-2 grid-rows-1 gap-6 pb-[3em]">
         <by-sell-card />
         <stake-card />
       </div>
