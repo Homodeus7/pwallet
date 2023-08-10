@@ -1,5 +1,5 @@
 <template>
-  <div class="px-[90px] py-[70px]">
+  <div class="py-[70px] mx-auto max-w-[1200px]">
     <div class="flex flex-col justify-between">
       <nfts-slider />
       <by-nft />

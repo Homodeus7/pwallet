@@ -12,7 +12,7 @@
         <img class="-ml-4" src="@/assets/icon/phantom.png" />
       </template>
     </base-button>
-    <decor-text>OR</decor-text>
+    <decor-text color="#334155">OR</decor-text>
     <div class="flex flex-col gap-[1.5em]">
       <base-input
         v-model="valid.email.value"

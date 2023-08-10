@@ -1,5 +1,5 @@
 <template>
-  <div class="w-[920px] mx-auto">
+  <div class="w-[920px] mx-auto flex flex-col gap-[2em]">
     <h2 class="font-medium text-4xl">Market</h2>
     <div>
       <div class="grid grid-cols-5 justify-between">
@@ -20,11 +20,13 @@
         <div>{{ nft.rarity }}</div>
         <div>{{ nft.network }}</div>
         <div>{{ nft.seller }}</div>
-        <div>{{ toReduction(nft.price) }}</div>
+        <div class="flex gap-2">
+          <img src="@/assets/icon/ethereum.svg" />
+          <span>{{ toReduction(nft.price) }}</span>
+        </div>
       </div>
     </div>
-
-    <div class="my-[3em] flex justify-center items-center">
+    <div class="flex justify-center items-center">
       <vue-awesome-paginate
         :total-items="50"
         :items-per-page="5"

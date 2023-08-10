@@ -12,9 +12,14 @@
       :fps="nft.fps"
     />
   </div>
+  <div class="w-full flex flex-col justify-center items-center mb-[3em]">
+    <by-nft-donut />
+  </div>
 </template>
 <script lang="ts" setup>
 import RareNftCard from '@/components/base/RareNftCard.vue'
+
+import ByNftDonut from './charts/ByNftDonut.vue'
 import { reactive } from 'vue'
 const nfts = reactive([
   {

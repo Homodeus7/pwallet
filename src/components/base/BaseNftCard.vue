@@ -11,7 +11,7 @@
       <div class="flex justify-between">
         <div class="flex flex-col w-full">
           <span class="text-xs text-[#93989A]">Current Bid</span>
-          <div class="flex">
+          <div class="flex gap-2">
             <img src="@/assets/icon/ethereum.svg" />
             <span>{{ toReduction(props.price) }}</span>
           </div>

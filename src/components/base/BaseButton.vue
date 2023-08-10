@@ -170,6 +170,19 @@ button {
       }
     }
   }
+  &.icon {
+    min-width: 2.5em;
+    padding: 0;
+    @media (min-width: 768px) {
+      transition: all linear $timeout;
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
   &.disabled {
     cursor: not-allowed;
     opacity: 0.5;

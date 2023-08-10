@@ -8,7 +8,8 @@
     >
       {{ props.label }}
       <input
-        :type="password ? 'password' : 'text'"
+        type="text"
+        v-bind="props"
         v-model="value"
         :class="{
           invalid: !isValid,
@@ -19,18 +20,14 @@
         :disabled="disabled"
       />
     </label>
-    <div class="absolute bottom-[0.9em] left-[1em]">
-      <slot name="prefix-icon"></slot>
-    </div>
-
-    <div class="absolute bottom-[0.3em] right-[1em]">
-      <slot name="suffix-icon"></slot>
-    </div>
-    <div class="absolute bottom-[0.7em] right-[1em]">
-      <slot name="coin-icon"></slot>
-    </div>
-
-    <slot></slot>
+    <BaseButton
+      v-if="props.maxValue"
+      class="absolute right-[1em] bottom-[0.8em]"
+      :disabled="props.disabled"
+      @click="value = props.maxValue"
+    >
+      <span class="text-[#A698F9]">Max</span>
+    </BaseButton>
     <span
       v-if="errorMessage && !isValid"
       class="absolute -bottom-[1.6em] left-2 text-[0.8em] font-medium text-[#ff8686]"
@@ -41,21 +38,20 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { onMounted, ref } from 'vue'
+import { computed, watch } from 'vue'
+import BaseButton from '@/components/base/BaseButton.vue'
 
 export interface InputProps {
-  modelValue?: string | unknown
+  modelValue?: string
   placeholder?: string
   isValid?: boolean
-  errorMessage?: string
   disabled?: boolean
   maxValue?: string
-  width?: string
+  validate?: string
+  errorMessage?: string
   label?: string
   background?: boolean
   labelThin?: boolean
-  password?: boolean
 }
 
 const props = defineProps<InputProps>()
@@ -66,19 +62,14 @@ const value = computed({
   set: (text) => emit('update:modelValue', text)
 })
 
-const input = ref<HTMLElement | null>(null)
-
-onMounted(() => {
-  try {
-    const tag = input.value as any
-
-    if (props.width) {
-      tag.style.width = props.width
-    }
-  } catch (e) {
-    console.error(e)
+watch(
+  () => props.modelValue,
+  (newValue, oldValue) => {
+    if (newValue && props.validate === 'number')
+      if (newValue.match(/^[0-9]*$/)) value.value = newValue
+      else value.value = oldValue
   }
-})
+)
 </script>
 
 <style lang="scss" scoped>
@@ -92,11 +83,12 @@ label .label-normal {
   color: white;
   font-weight: 500;
 }
+
 input[type='text'],
 input[type='password'] {
   font-size: 16px;
   color: white;
-  padding: 0.8em 1em 0.8em 1em;
+  padding: 0.7em 1em 0.7em 1em;
   margin-top: 12px;
   outline: none;
   &::placeholder {

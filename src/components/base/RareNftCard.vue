@@ -11,7 +11,7 @@
           <base-button primary class="w-[7.5em]">Buy</base-button>
           <div class="flex flex-col">
             <span class="text-xs text-[#93989A]">Price:</span>
-            <div class="flex">
+            <div class="flex gap-2">
               <img src="@/assets/icon/ethereum.svg" />
               <span>{{ toReduction(props.price) }}</span>
             </div>

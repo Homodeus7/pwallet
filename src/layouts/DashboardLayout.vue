@@ -1,9 +1,11 @@
 <template>
-  <header-nav />
-  <sidebar-nav />
-  <main class="main-bg bg-[#161616] pl-[322px] pt-[124px]">
-    <router-view />
-  </main>
+  <div class="w-[100vw]">
+    <header-nav />
+    <sidebar-nav />
+    <main class="bg-[#161616] ml-[322px] pt-[124px]">
+      <router-view />
+    </main>
+  </div>
 </template>
 
 <script lang="ts" setup>
