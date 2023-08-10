@@ -23,7 +23,7 @@
       </div>
       <transition name="slide">
         <div
-          class="list absolute top-[3.2em] left-0 right-0 z-10 flex flex-col items-start bg-[#181a26] rounded-b-[0.5em]"
+          class="list absolute top-[3em] left-0 right-0 z-10 flex flex-col items-start bg-[#181a26] rounded-b-[0.5em]"
           v-if="active"
         >
           <div
