@@ -1,35 +1,38 @@
 <template>
-  <base-card color="#242731" radius="16px" padding="35px" width="920px" height="410px">
-    <div id="chart" class="w-[550px]">
-      <apexchart type="donut" :options="chartOptions" :series="series"></apexchart>
-    </div>
-  </base-card>
+  <div class="w-full">
+    <h2 class="font-medium text-3xl pb-[1em]">Total Profit</h2>
+    <base-card color="#242731" radius="16px" padding="20px">
+      <div id="chart" class="w-[473px]">
+        <apexchart type="donut" :options="chartOptions" :series="series"></apexchart>
+      </div>
+    </base-card>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
 import BaseCard from '@/components/base/BaseCard.vue'
-const series = reactive([590, 250, 150, 150])
+const series = reactive([90, 150, 100])
 
 const chartOptions = reactive({
   chart: {
     type: 'donut'
   },
-  colors: ['#FFFFFF', '#4DC876', '#F468D5', '#FF9736'],
+  colors: ['#6c5dd3', '#ffb7f4', '#1d1f24'],
   stroke: {
     width: 0
   },
   plotOptions: {
     pie: {
       donut: {
-        size: '45%',
+        size: '65%',
         labels: {
           show: false
         }
       }
     }
   },
-  labels: ['Uncommon', 'Common', 'Rare', 'Legendary'],
+  labels: ['Templates', 'Themes', ''],
   dataLabels: { enabled: false },
   states: {
     hover: {
@@ -49,8 +52,8 @@ const chartOptions = reactive({
       height: 20
     },
     itemMargin: {
-      horizontal: 10,
-      vertical: 10
+      horizontal: 5,
+      vertical: 5
     }
   }
 })

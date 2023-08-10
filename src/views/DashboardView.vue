@@ -4,7 +4,7 @@
       <nfts-slider />
       <div class="grid grid-cols-2 grid-rows-1 gap-6 pb-[3em]">
         <nft-bridge />
-        <stake-card />
+        <total-profit-donut />
       </div>
       <by-nft />
       <my-market />
@@ -16,5 +16,6 @@ import NftsSlider from '@/components/dashboard/NftsSlider.vue'
 import ByNft from '@/components/dashboard/ByNft.vue'
 import NftBridge from '@/components/dashboard/NftBridge.vue'
 import MyMarket from '@/components/dashboard/MyMarket.vue'
+import TotalProfitDonut from '@/components/dashboard/charts/TotalProfitDonut.vue'
 </script>
 <style lang="scss" scoped></style>
