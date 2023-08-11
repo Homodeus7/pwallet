@@ -1,19 +1,13 @@
 <template>
   <div class="h-full">
-    <h2 class="font-medium text-3xl mb-[1em]">TVL</h2>
+    <h2 class="font-medium text-3xl mb-[1em]">Transactions</h2>
     <base-card color="#242731" radius="20px" padding="24px 40px 24px 60px" class="flex flex-col">
       <div class="ml-4 mr-9 border-b border-b-[#656583]">
         <h4 class="font-light text-lg text-[#9291A5]">Statistics</h4>
-        <h3 class="font-medium text-2xl pb-4">TVL</h3>
+        <h3 class="font-medium text-2xl pb-4">Transactions</h3>
       </div>
       <div id="chart">
-        <apexchart
-          type="area"
-          theme="dark"
-          height="350"
-          :options="chartOptions"
-          :series="series"
-        ></apexchart>
+        <apexchart type="bar" height="350" :options="chartOptions" :series="series"></apexchart>
       </div>
     </base-card>
   </div>
@@ -33,13 +27,19 @@ const series = reactive([
 const chartOptions = reactive({
   chart: {
     height: 350,
-    type: 'area',
+    type: 'bar',
     stacked: false,
     toolbar: {
       show: false
     },
     zoom: {
       enabled: false
+    }
+  },
+  plotOptions: {
+    bar: {
+      borderRadius: 10,
+      borderBottom: false
     }
   },
   animations: {
@@ -55,22 +55,13 @@ const chartOptions = reactive({
       speed: 350
     }
   },
-  colors: ['#4dc876'],
-  stroke: {
-    curve: 'smooth',
-    width: '2'
-  },
+  colors: ['#3988FF'],
   dataLabels: {
     enabled: false
   },
-  fill: {
-    type: 'gradient',
-    gradient: {
-      opacityFrom: 0,
-      opacityTo: 0
-    }
+  tooltip: {
+    enabled: false
   },
-  tooltip: { shared: false },
   xaxis: {
     categories: ['1 Week', '2 Week', '3 Week', '4 Week', '5 Week', '6 Week', '7 Week'],
     labels: {
@@ -85,14 +76,14 @@ const chartOptions = reactive({
       }
     },
     axisBorder: {
-      show: false
+      show: true,
+      color: '#66686f'
     },
     axisTicks: {
       show: false
     },
     tooltip: {
-      enabled: false,
-      theme: 'dark'
+      enabled: false
     },
     crosshairs: {
       show: true,
@@ -123,10 +114,8 @@ const chartOptions = reactive({
       }
     },
     axisBorder: {
-      show: false,
-      color: '#78909C',
-      offsetX: 0,
-      offsetY: 0
+      show: true,
+      color: '#66686f'
     },
     axisTicks: {
       show: false
@@ -150,7 +139,7 @@ const chartOptions = reactive({
   grid: {
     show: true,
     borderColor: '#454750',
-    strokeDashArray: 0
+    strokeDashArray: 6
   }
 })
 </script>
