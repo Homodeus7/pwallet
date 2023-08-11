@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <router-link to="/dashboard">
+    <router-link to="/nft">
       <img class="w-[8em] lg:w-[10.5em] pt-5 pb-10" src="@/assets/logo.png" />
     </router-link>
     <div v-for="link in links" class="flex flex-col gap-5 text-[0.8em]">

@@ -13,22 +13,6 @@ const router = createRouter({
       }
     },
     {
-      path: '/login',
-      name: 'login',
-      component: () => import('@/views/LoginView.vue'),
-      meta: {
-        layout: 'landing'
-      }
-    },
-    {
-      path: '/registration',
-      name: 'registration',
-      component: () => import('@/views/RegistrationView.vue'),
-      meta: {
-        layout: 'landing'
-      }
-    },
-    {
       path: '/nft',
       name: 'nft',
       component: () => import('@/views/NftView.vue'),
@@ -40,6 +24,22 @@ const router = createRouter({
       path: '/playw',
       name: 'playw',
       component: () => import('@/views/PlayWView.vue'),
+      meta: {
+        layout: 'dashboard'
+      }
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/components/dashboard/LoginView.vue'),
+      meta: {
+        layout: 'dashboard'
+      }
+    },
+    {
+      path: '/registration',
+      name: 'registration',
+      component: () => import('@/components/dashboard/RegistrationView.vue'),
       meta: {
         layout: 'dashboard'
       }

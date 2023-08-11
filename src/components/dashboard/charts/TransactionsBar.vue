@@ -2,12 +2,12 @@
   <div class="h-full">
     <h2 class="font-medium text-3xl mb-[1em]">Transactions</h2>
     <base-card color="#242731" radius="20px" padding="24px 40px 24px 60px" class="flex flex-col">
-      <div class="ml-4 mr-9 border-b border-b-[#656583]">
+      <div class="ml-4 mr-2 border-b border-b-[#656583]">
         <h4 class="font-light text-lg text-[#9291A5]">Statistics</h4>
         <h3 class="font-medium text-2xl pb-4">Transactions</h3>
       </div>
       <div id="chart">
-        <apexchart type="bar" height="350" :options="chartOptions" :series="series"></apexchart>
+        <apexchart type="bar" height="380" :options="chartOptions" :series="series"></apexchart>
       </div>
     </base-card>
   </div>
@@ -20,13 +20,13 @@ import { reactive } from 'vue'
 const series = reactive([
   {
     name: '$',
-    data: [0, 100000, 250000, 500000, 250000, 250000]
+    data: [150000, 100000, 250000, 500000, 250000, 200000, 250000]
   }
 ])
 
 const chartOptions = reactive({
   chart: {
-    height: 350,
+    height: 380,
     type: 'bar',
     stacked: false,
     toolbar: {
@@ -40,19 +40,6 @@ const chartOptions = reactive({
     bar: {
       borderRadius: 10,
       borderBottom: false
-    }
-  },
-  animations: {
-    enabled: true,
-    easing: 'easeinout',
-    speed: 800,
-    animateGradually: {
-      enabled: true,
-      delay: 150
-    },
-    dynamicAnimation: {
-      enabled: true,
-      speed: 350
     }
   },
   colors: ['#3988FF'],

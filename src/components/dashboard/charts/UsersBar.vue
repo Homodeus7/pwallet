@@ -1,19 +1,13 @@
 <template>
   <div class="h-full">
-    <h2 class="font-medium text-3xl mb-[1em]">TVL</h2>
+    <h2 class="font-medium text-3xl mb-[1em]">Users</h2>
     <base-card color="#242731" radius="20px" padding="24px 40px 24px 60px" class="flex flex-col">
-      <div class="ml-4 mr-9 border-b border-b-[#656583]">
+      <div class="ml-4 mr-2 border-b border-b-[#656583]">
         <h4 class="font-light text-lg text-[#9291A5]">Statistics</h4>
-        <h3 class="font-medium text-2xl pb-4">TVL</h3>
+        <h3 class="font-medium text-2xl pb-4">Users</h3>
       </div>
       <div id="chart">
-        <apexchart
-          type="area"
-          theme="dark"
-          height="350"
-          :options="chartOptions"
-          :series="series"
-        ></apexchart>
+        <apexchart type="bar" height="380" :options="chartOptions" :series="series"></apexchart>
       </div>
     </base-card>
   </div>
@@ -26,14 +20,14 @@ import { reactive } from 'vue'
 const series = reactive([
   {
     name: '$',
-    data: [0, 100000, 250000, 500000, 250000, 250000]
+    data: [150000, 100000, 250000, 500000, 250000, 200000, 250000]
   }
 ])
 
 const chartOptions = reactive({
   chart: {
-    height: 350,
-    type: 'area',
+    height: 380,
+    type: 'bar',
     stacked: false,
     toolbar: {
       show: false
@@ -42,44 +36,21 @@ const chartOptions = reactive({
       enabled: false
     }
   },
-  animations: {
-    enabled: true,
-    easing: 'easeinout',
-    speed: 800,
-    animateGradually: {
-      enabled: true,
-      delay: 150
-    },
-    dynamicAnimation: {
-      enabled: true,
-      speed: 350
+  plotOptions: {
+    bar: {
+      borderRadius: 10,
+      borderBottom: false
     }
   },
-  colors: ['#4dc876'],
-  stroke: {
-    curve: 'smooth',
-    width: '2'
-  },
+  colors: ['#A698F9'],
   dataLabels: {
     enabled: false
   },
-  fill: {
-    type: 'gradient',
-    gradient: {
-      opacityFrom: 0,
-      opacityTo: 0
-    }
-  },
   tooltip: {
-    shared: false,
-    style: {
-      fontSize: '13px',
-      fontFamily: 'Ranua Trials',
-      fontWeight: 'light'
-    }
+    enabled: false
   },
   xaxis: {
-    categories: ['1 Week', '2 Week', '3 Week', '4 Week', '5 Week', '6 Week', '7 Week'],
+    categories: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL'],
     labels: {
       show: true,
       maxHeight: 120,
@@ -92,14 +63,14 @@ const chartOptions = reactive({
       }
     },
     axisBorder: {
-      show: false
+      show: true,
+      color: '#66686f'
     },
     axisTicks: {
       show: false
     },
     tooltip: {
-      enabled: false,
-      theme: 'dark'
+      enabled: false
     },
     crosshairs: {
       show: true,
@@ -130,10 +101,8 @@ const chartOptions = reactive({
       }
     },
     axisBorder: {
-      show: false,
-      color: '#78909C',
-      offsetX: 0,
-      offsetY: 0
+      show: true,
+      color: '#66686f'
     },
     axisTicks: {
       show: false
@@ -157,21 +126,27 @@ const chartOptions = reactive({
   grid: {
     show: true,
     borderColor: '#454750',
-    strokeDashArray: 0
+    strokeDashArray: 6
   }
 })
 </script>
 <style lang="scss">
 #chart .apexcharts-tooltip {
   color: white;
-
   text-align: center;
   background-color: #0a0a0a;
   border: none;
   border-radius: 6px;
   min-width: 176px;
 }
+
 #chart .apexcharts-tooltip-title {
   display: none;
+  color: white;
+  text-align: center;
+  background-color: #0a0a0a;
+  border: none;
+  border-radius: 6px;
+  min-width: 176px;
 }
 </style>
