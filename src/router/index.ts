@@ -29,6 +29,14 @@ const router = createRouter({
       }
     },
     {
+      path: '/market',
+      name: 'market',
+      component: () => import('@/views/PlayWView.vue'),
+      meta: {
+        layout: 'dashboard'
+      }
+    },
+    {
       path: '/login',
       name: 'login',
       component: () => import('@/components/dashboard/LoginView.vue'),
