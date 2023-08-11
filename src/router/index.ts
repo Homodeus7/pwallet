@@ -29,9 +29,9 @@ const router = createRouter({
       }
     },
     {
-      path: '/dashboard',
-      name: 'dashboard',
-      component: () => import('@/views/DashboardView.vue'),
+      path: '/nft',
+      name: 'nft',
+      component: () => import('@/views/NftView.vue'),
       meta: {
         layout: 'dashboard'
       }
@@ -39,15 +39,15 @@ const router = createRouter({
     {
       path: '/playw',
       name: 'playw',
-      component: () => import('@/components/dashboard/PlayW.vue'),
+      component: () => import('@/views/PlayWView.vue'),
       meta: {
         layout: 'dashboard'
       }
     },
     {
-      path: '/nft',
-      name: 'nft',
-      component: () => import('@/components/dashboard/NFT.vue'),
+      path: '/project',
+      name: 'project',
+      component: () => import('@/views/ProjectOverview.vue'),
       meta: {
         layout: 'dashboard'
       }

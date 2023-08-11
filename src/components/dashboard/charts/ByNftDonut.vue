@@ -9,6 +9,7 @@
 <script lang="ts" setup>
 import { reactive } from 'vue'
 import BaseCard from '@/components/base/BaseCard.vue'
+
 const series = reactive([590, 250, 150, 150])
 
 const chartOptions = reactive({
