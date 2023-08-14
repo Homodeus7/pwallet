@@ -185,17 +185,16 @@ button {
   }
   &.disabled {
     cursor: not-allowed;
-    opacity: 0.5;
+    background: #33343d;
+    color: #70758f;
     @media (min-width: 768px) {
       &:hover {
-        background: #6271eb;
-        color: white;
-        opacity: 0.5;
+        background: #33343d;
+        color: #70758f;
       }
       &:active {
-        background: #6271eb;
-        color: white;
-        opacity: 0.5;
+        background: #33343d;
+        color: #70758f;
       }
     }
   }

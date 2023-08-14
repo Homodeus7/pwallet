@@ -2,7 +2,7 @@
   <base-card color="#242634" radius="16px" padding="24px" class="overflow-hidden">
     <div class="flex justify-between">
       <div class="flex flex-col justify-between relative">
-        <div class="bg w-min" :class="props.rare">
+        <div class="w-min" :class="props.rare">
           <img class="min-w-[90px] bg" :src="`/icons/${props.icon}`" />
         </div>
         <div class="flex flex-col gap-2 pt-[50px] pb-6">
@@ -23,7 +23,7 @@
       <div class="flex flex-col items-end justify-between">
         <span class="z-10">Total: {{ props.fps }} PCS</span>
         <div class="pb-10 mr-10 z-10 w-32 relative">
-          <div class="bg" :class="props.rare">
+          <div class="drop-shadow-2xl" :class="props.rare">
             <img :src="`${props.img}`" />
           </div>
         </div>
@@ -56,10 +56,10 @@ const props = defineProps<NFT>()
   content: '';
   position: absolute;
   z-index: 0;
-  top: -5%;
+  top: -2%;
   bottom: 0;
   right: 0;
-  left: -5%;
+  left: -7%;
   width: 105%;
   height: 105%;
   opacity: 0.35;
@@ -71,10 +71,10 @@ const props = defineProps<NFT>()
   content: '';
   position: absolute;
   z-index: 0;
-  top: -5%;
+  top: -2%;
   bottom: 0;
   right: 0;
-  left: -5%;
+  left: -7%;
   width: 105%;
   height: 105%;
   opacity: 0.35;
@@ -86,10 +86,10 @@ const props = defineProps<NFT>()
   content: '';
   position: absolute;
   z-index: 0;
-  top: -5%;
+  top: -2%;
   bottom: 0;
   right: 0;
-  left: -5%;
+  left: -7%;
   width: 105%;
   height: 105%;
   opacity: 0.35;
@@ -101,10 +101,10 @@ const props = defineProps<NFT>()
   content: '';
   position: absolute;
   z-index: 0;
-  top: -5%;
+  top: -2%;
   bottom: 0;
   right: 0;
-  left: -5%;
+  left: -7%;
   width: 105%;
   height: 105%;
   opacity: 0.35;

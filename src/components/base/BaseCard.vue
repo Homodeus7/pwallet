@@ -8,7 +8,7 @@
 import { ref, onMounted } from 'vue'
 
 export interface CardProps {
-  color?: string
+  color: string
   radius?: string
   width?: string
   height?: string

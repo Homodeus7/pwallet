@@ -64,7 +64,7 @@ import MarketIcon from '@/components/base/icons/sidebar/MarketIcon.vue'
 import NftIcon from '@/components/base/icons/sidebar/NftIcon.vue'
 import PlayWIcon from '@/components/base/icons/sidebar/PlayWIcon.vue'
 import OverviewIcon from '@/components/base/icons/sidebar/OverviewIcon.vue'
-import { reactive, ref } from 'vue'
+import { reactive } from 'vue'
 
 const links = reactive([
   {
@@ -78,9 +78,10 @@ const links = reactive([
       {
         isOpen: false,
         name: 'Play Models',
-        href: '/market',
+        href: '/market-masters',
         component: MarketIcon,
         submenu: [
+          { name: 'Market Masters', href: '/market-masters' },
           { name: 'Walking mode', href: '/walking-mode' },
           { name: 'Event Battle', href: '/event-battle' }
         ]

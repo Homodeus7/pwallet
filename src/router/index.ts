@@ -59,6 +59,30 @@ const router = createRouter({
       meta: {
         layout: 'dashboard'
       }
+    },
+    {
+      path: '/market-masters',
+      name: 'market-masters',
+      component: () => import('@/components/dashboard/MarketMasters.vue'),
+      meta: {
+        layout: 'dashboard'
+      }
+    },
+    {
+      path: '/walking-mode',
+      name: 'walking-mode',
+      component: () => import('@/components/dashboard/WalkingMode.vue'),
+      meta: {
+        layout: 'dashboard'
+      }
+    },
+    {
+      path: '/event-battle',
+      name: 'event-battle',
+      component: () => import('@/components/dashboard/EventBattle.vue'),
+      meta: {
+        layout: 'dashboard'
+      }
     }
   ]
 })

@@ -1,6 +1,6 @@
 <template>
   <div class="flex gap-3 relative">
-    <div @click="menu = true" class="flex gap-3 pr-4 cursor-pointer hover:opacity-75">
+    <div @click="menu = !menu" class="flex gap-3 pr-4 cursor-pointer hover:opacity-75">
       <div class="w-[52px] rounded-full">
         <img class="bg-cover" src="@/assets/img/user.png" />
       </div>
@@ -13,7 +13,7 @@
       <div
         v-if="menu"
         ref="dropdown"
-        class="w-[360px] absolute left-0 top-16 bg-[#242731] rounded-[1.2em] flex flex-col items-start p-[2em] z-50"
+        class="w-[360px] absolute left-0 top-16 bg-[#242731] drop-shadow-lg rounded-[1.2em] flex flex-col items-start p-[2em] z-50"
       >
         <div class="w-full flex justify-between pb-[1.5em]">
           <h4>My account</h4>
@@ -61,13 +61,14 @@ import CopyIcon from '@/components/base/icons/CopyIcon.vue'
 import { ref } from 'vue'
 import { onClickOutside } from '@vueuse/core'
 import { shortAddress } from '@/use/utils'
+
 const menu = ref(false)
-const copied = ref(false)
 const dropdown = ref<HTMLElement | null>(null)
+const copied = ref(false)
+const active = ref(false)
 
 onClickOutside(dropdown, () => (menu.value = false))
 
-const active = ref(false)
 const account = ref({
   name: 'Jhon Doe',
   adress: '@jhondoe',

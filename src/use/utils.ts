@@ -88,4 +88,12 @@ export const shortAddress = (str: string, start = 6, end = start - 2) => {
 
 export const toReduction = (price: number) => (price < 1 ? price.toPrecision(2) : price.toFixed(2))
 
+export const toPriceView = (price: number) =>
+  `${price}`
+    .split('')
+    .reverse()
+    .map((el, index) => (index % 3 !== 2 ? el : ` ${el}`))
+    .reverse()
+    .join('')
+
 export const nowInSeconds = () => Math.floor(Date.now() / 1000)
