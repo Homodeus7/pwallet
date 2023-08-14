@@ -4,7 +4,7 @@
       <div class="w-[52px] rounded-full">
         <img class="bg-cover" src="@/assets/img/user.png" />
       </div>
-      <div class="flex flex-col">
+      <div class="hidden lg:flex flex-col">
         <div class="text-lg">{{ account.name }}</div>
         <div class="text-sm text-[#93989A]">{{ account.adress }}</div>
       </div>
@@ -41,13 +41,13 @@
       </div>
     </transition>
     <div
-      class="w-[52px] h-[52px] flex items-center justify-center rounded-full border border-[#2B2E41] cursor-pointer"
+      class="-order-1 lg:order-none w-[52px] h-[52px] flex items-center justify-center rounded-full border border-[#2B2E41] cursor-pointer"
       @click="active = !active"
     >
       <img v-if="active" src="@/assets/icon/notification-active.svg" />
       <img v-else src="@/assets/icon/notification.svg" />
     </div>
-    <base-button outlines>
+    <base-button outlines class="hidden lg:flex">
       Log out
       <template v-slot:prefix-icon>
         <img class="pr-2" src="@/assets/icon/logout.svg" />

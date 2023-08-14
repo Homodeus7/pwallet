@@ -1,7 +1,8 @@
 <template>
   <header class="header">
-    <div class="w-full flex justify-between pl-[322px]">
-      <div>
+    <div class="w-full flex items-center justify-between lg:pl-[322px]">
+      <burger-menu />
+      <div class="hidden lg:flex flex-col items-start">
         <h2 class="font-medium text-2xl">Hello world!</h2>
         <p class="text-sm text-[#9f9f9f]">This is your own PW Dashboard.</p>
       </div>
@@ -11,6 +12,7 @@
 </template>
 <script lang="ts" setup>
 import AccountNav from '@/components/dashboard/nav/AccountNav.vue'
+import BurgerMenu from '@/components/dashboard/nav/BurgerMenu.vue'
 </script>
 <style lang="scss" scoped>
 .header {
