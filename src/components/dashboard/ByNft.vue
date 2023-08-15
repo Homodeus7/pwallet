@@ -1,5 +1,5 @@
 <template>
-  <h2 class="font-medium text-4xl">Buy NFT</h2>
+  <h2 class="font-medium text-[2.25em]">Buy NFT</h2>
   <div class="grid grid-cols-2 grid-rows-2 gap-6 my-[3em]">
     <rare-nft-card
       v-for="nft in nfts"

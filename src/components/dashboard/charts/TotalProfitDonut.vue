@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <h2 class="font-medium text-3xl pb-[1em]">Total Profit</h2>
+    <h2 class="font-medium text-[1.875em] pb-[1em]">Total Profit</h2>
     <base-card color="#242731" radius="16px" padding="20px">
       <div id="chart" class="w-[473px]">
         <apexchart type="donut" :options="chartOptions" :series="series"></apexchart>

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-[1200px] min-h-[100vh] py-[70px] mx-auto">
+  <div class="max-w-[1200px] py-[70px] mx-auto">
     <play-model-card
       v-for="game in walckingMode"
       :toBlocked="game.toBlocked"

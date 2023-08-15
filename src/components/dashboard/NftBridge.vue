@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="font-medium text-3xl pb-[1em]">Bridge</h2>
+    <h2 class="font-medium text-[1.875em] pb-[1em]">Bridge</h2>
     <base-card color="#242731" radius="16px" padding="30px 24px" class="flex flex-col gap-[1.2em]">
       <base-selector name="Select NFT" :options="nfts" v-model="name"> </base-selector>
       <base-selector name="To Network" :options="networks" v-model="network"> </base-selector>

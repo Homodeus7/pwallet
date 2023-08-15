@@ -1,6 +1,6 @@
 <template>
   <div class="w-[920px] mx-auto flex flex-col gap-[2em]">
-    <h2 class="font-medium text-4xl">Market</h2>
+    <h2 class="font-medium text-[2.25em]">Market</h2>
     <div>
       <div class="grid grid-cols-5 justify-between">
         <div

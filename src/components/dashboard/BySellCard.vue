@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="font-medium text-3xl pb-[1em]">Buy / Sell</h2>
+    <h2 class="font-medium text-[1.875em] pb-[1em]">Buy / Sell</h2>
     <base-card
       color="#242731"
       radius="16px"

@@ -1,5 +1,5 @@
 <template>
-  <h2 class="font-medium text-4xl">My NFT’s</h2>
+  <h2 class="font-medium text-[2.25em]">My NFT’s</h2>
   <div class="w-full mx-auto pb-[3em]">
     <swiper
       :modules="modules"

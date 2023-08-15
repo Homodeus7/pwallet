@@ -1,6 +1,6 @@
 <template>
   <div class="w-[975px] mx-auto flex flex-col gap-[1em] pb-[3em]">
-    <h2 class="font-medium text-2xl">Current stakes</h2>
+    <h2 class="font-medium text-[2em]">Current stakes</h2>
     <div>
       <div class="grid grid-cols-6 justify-between">
         <div

@@ -1,5 +1,5 @@
 <template>
-  <h2 class="font-medium text-3xl pb-[1em]">My Assets</h2>
+  <h2 class="font-medium text-[1.875em] pb-[1em]">My Assets</h2>
   <div class="grid grid-cols-2 gap-6 pb-[3em]">
     <base-card color="#242731" radius="16px" padding="30px 24px" class="flex flex-col gap-[1em]">
       <base-input label="Total PlayW" isValid background />

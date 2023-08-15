@@ -45,6 +45,14 @@ const router = createRouter({
       }
     },
     {
+      path: '/proposals',
+      name: 'proposals',
+      component: () => import('@/views/ProposalsView.vue'),
+      meta: {
+        layout: 'dashboard'
+      }
+    },
+    {
       path: '/registration',
       name: 'registration',
       component: () => import('@/components/dashboard/RegistrationView.vue'),

@@ -1,6 +1,6 @@
 <template>
   <div class="h-full">
-    <h2 class="font-medium text-3xl mb-[1em]">Stake</h2>
+    <h2 class="font-medium text-[1.875em] mb-[1em]">Stake</h2>
     <base-card
       color="#242731"
       radius="16px"

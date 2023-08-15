@@ -1,10 +1,10 @@
 <template>
   <div class="h-full">
-    <h2 class="font-medium text-3xl mb-[1em]">TVL</h2>
+    <h2 class="font-medium text-[1.875em] mb-[1em]">TVL</h2>
     <base-card color="#242731" radius="20px" padding="24px 40px 24px 60px" class="flex flex-col">
       <div class="ml-4 mr-9 border-b border-b-[#656583]">
         <h4 class="font-light text-lg text-[#9291A5]">Statistics</h4>
-        <h3 class="font-medium text-2xl pb-4">TVL</h3>
+        <h3 class="font-medium text-[2em] pb-4">TVL</h3>
       </div>
       <div id="chart">
         <apexchart

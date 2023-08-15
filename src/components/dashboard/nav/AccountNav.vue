@@ -1,8 +1,8 @@
 <template>
-  <div class="flex gap-3 relative">
-    <div @click="menu = !menu" class="flex gap-3 pr-4 cursor-pointer hover:opacity-75">
+  <nav class="flex gap-3 relative">
+    <div @click="toggleMenu" class="flex gap-3 pr-4 cursor-pointer hover:opacity-75">
       <div class="w-[52px] rounded-full">
-        <img class="bg-cover" src="@/assets/img/user.png" />
+        <img class="bg-cover" :src="account.img" />
       </div>
       <div class="hidden lg:flex flex-col">
         <div class="text-lg">{{ account.name }}</div>
@@ -11,7 +11,7 @@
     </div>
     <transition name="visible">
       <div
-        v-if="menu"
+        v-if="menu === true"
         ref="dropdown"
         class="w-[360px] absolute left-0 top-16 bg-[#242731] drop-shadow-lg rounded-[1.2em] flex flex-col items-start p-[2em] z-50"
       >
@@ -53,7 +53,7 @@
         <img class="pr-2" src="@/assets/icon/logout.svg" />
       </template>
     </base-button>
-  </div>
+  </nav>
 </template>
 <script lang="ts" setup>
 import BaseButton from '@/components/base/BaseButton.vue'
@@ -68,9 +68,11 @@ const copied = ref(false)
 const active = ref(false)
 
 onClickOutside(dropdown, () => (menu.value = false))
+const toggleMenu = () => (menu.value = !menu.value)
 
 const account = ref({
   name: 'Jhon Doe',
+  img: 'src//assets/img/user.png',
   adress: '@jhondoe',
   wallet: '0xF1FE73D1d411A9EF7B3ff6eC7de93e9C1c73A5b3',
   email: 'klausthethale@gmail.com'
@@ -82,3 +84,19 @@ const copyText = () => {
   setTimeout(() => (copied.value = false), 2000)
 }
 </script>
+<style lang="scss" scoped>
+.visible-enter-active {
+  animation: menu-in 0.2s;
+}
+.visible-leave-active {
+  animation: menu-in 0.2s reverse;
+}
+@keyframes menu-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+</style>
