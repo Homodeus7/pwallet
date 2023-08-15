@@ -1,20 +1,20 @@
 <template>
-  <h2 class="font-medium text-[2.25em]">My NFT’s</h2>
+  <h2 class="font-medium text-[1.5em] lg:text-[2.25em]">My NFT’s</h2>
   <div class="w-full mx-auto pb-[3em]">
     <swiper
       :modules="modules"
       :slides-per-view="3"
-      :space-between="30"
       :navigation="{
         prevEl: prev,
         nextEl: next
       }"
       :pagination="{ clickable: true }"
+      :breakpoints="swiperOptions.breakpoints"
       preload-images="false"
       lazy="lazy"
-      class="mx-[3em]"
+      class="lg:mx-[3em]"
     >
-      <swiper-slide v-for="nft in nfts" :key="nft.name" class="my-[3em]">
+      <swiper-slide v-for="nft in nfts" :key="nft.name" class="mt-[1.5em] mb-[3em] lg:my-[3em]">
         <base-nft-card :name="nft.name" :author="nft.author" :price="nft.price" :img="nft.img" />
       </swiper-slide>
     </swiper>
@@ -45,6 +45,18 @@ const nfts = reactive([
   { name: 'NFT Name_2', author: 'NFT Author', price: 0.00000123123, img: 'nft_2.png' },
   { name: 'NFT Name_3', author: 'NFT Author', price: 0.12312, img: 'nft_3.png' }
 ])
+const swiperOptions = reactive({
+  breakpoints: {
+    200: {
+      slidesPerView: 2,
+      spaceBetween: 8
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+  }
+})
 </script>
 
 <style lang="scss">
@@ -68,29 +80,37 @@ const nfts = reactive([
   background-color: #fff;
   border: none;
 }
+
 .swiper-button-prev,
 .swiper-button-next {
-  height: 36px;
-  width: 36px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
+  display: none;
 }
+@media (min-width: 1024px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: block;
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
 
-.swiper-button-prev {
-  left: -10px;
-  background-repeat: no-repeat;
-  background-image: url('@/assets/icon/arrow-circle-left.svg');
-}
+  .swiper-button-prev {
+    left: -10px;
+    background-repeat: no-repeat;
+    background-image: url('@/assets/icon/arrow-circle-left.svg');
+  }
 
-.swiper-button-next {
-  right: -10px;
-  background-repeat: no-repeat;
-  background-image: url('@/assets/icon/arrow-circle-right.svg');
-}
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  content: '';
+  .swiper-button-next {
+    right: -10px;
+    background-repeat: no-repeat;
+    background-image: url('@/assets/icon/arrow-circle-right.svg');
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    content: '';
+  }
 }
 </style>

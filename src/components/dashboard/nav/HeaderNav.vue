@@ -1,6 +1,6 @@
 <template>
   <header
-    class="fixded w-full py-[2.25em] pr-[3em] pl-[2em] z-20 bg-[#0f0f0f] border-b-2 border-b-[#2b2e41]"
+    class="fixed w-full py-[1em] px-[1.25em] lg:py-[2.25em] lg:pr-[3em] lg:pl-[2em] z-20 bg-[#0f0f0f] border-b-2 border-b-[#2b2e41]"
   >
     <div class="w-full flex items-center justify-between lg:pl-[322px]">
       <burger-menu />

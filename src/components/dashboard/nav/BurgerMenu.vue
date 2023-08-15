@@ -26,4 +26,3 @@ const toggleMenu = () => {
   emit('isOpen')
 }
 </script>
-<style lang="scss" scoped></style>

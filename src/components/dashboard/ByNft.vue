@@ -1,6 +1,6 @@
 <template>
-  <h2 class="font-medium text-[2.25em]">Buy NFT</h2>
-  <div class="grid grid-cols-2 grid-rows-2 gap-6 my-[3em]">
+  <h2 class="font-medium text-[1.5em] lg:text-[2.25em]">Buy NFT</h2>
+  <div class="grid lg:grid-cols-2 lg:grid-rows-2 gap-6 my-[1.5em] lg:my-[3em]">
     <rare-nft-card
       v-for="nft in nfts"
       :key="nft.name"
@@ -12,9 +12,9 @@
       :fps="nft.fps"
     />
   </div>
-  <div class="w-full flex flex-col justify-center items-center mb-[3em]">
+  <!-- <div class="w-full flex flex-col justify-center items-center mb-[3em]">
     <by-nft-donut />
-  </div>
+  </div> -->
 </template>
 <script lang="ts" setup>
 import RareNftCard from '@/components/base/RareNftCard.vue'

@@ -103,7 +103,7 @@ const links = reactive([
 .sidebar {
   width: 250px;
   position: fixed;
-  top: 124px;
+  top: 82px;
   left: 0;
   height: 100%;
   background: #0f0f0f;
@@ -114,47 +114,47 @@ const links = reactive([
   &_isopen {
     transform: translateX(0px);
   }
+  &__link {
+    display: flex;
+    gap: 16px;
+    color: #93989a;
+    border-radius: 0.65em;
+    padding: 10px;
+    margin-left: -10px;
+    transition: 0.2s;
+    font-weight: 500;
+    font-size: 1em;
+    margin-bottom: 8px;
+    &:hover {
+      color: #8d92ff;
+      background-color: rgb(85, 104, 255, 0.1);
+    }
+    &:hover svg {
+      stroke: #8d92ff;
+    }
+  }
+  &__sublink {
+    display: flex;
+    gap: 16px;
+    color: #93989a;
+    padding: 12px 20px;
+    margin-left: -10px;
+    transition: 0.2s;
+    font-weight: 300;
+    font-size: 1em;
+    &:hover {
+      color: #8d92ff;
+    }
+    &:hover svg {
+      stroke: #8d92ff;
+    }
+  }
   @media (min-width: 1024px) {
     transform: translateX(0px);
     width: 322px;
     left: 0;
     top: 0;
-    z-index: 50;
-    &__link {
-      display: flex;
-      gap: 16px;
-      color: #93989a;
-      border-radius: 0.65em;
-      padding: 10px;
-      margin-left: -10px;
-      transition: 0.2s;
-      font-weight: 500;
-      font-size: 1em;
-      margin-bottom: 8px;
-      &:hover {
-        color: #8d92ff;
-        background-color: rgb(85, 104, 255, 0.1);
-      }
-      &:hover svg {
-        stroke: #8d92ff;
-      }
-    }
-    &__sublink {
-      display: flex;
-      gap: 16px;
-      color: #93989a;
-      padding: 12px 20px;
-      margin-left: -10px;
-      transition: 0.2s;
-      font-weight: 300;
-      font-size: 1em;
-      &:hover {
-        color: #8d92ff;
-      }
-      &:hover svg {
-        stroke: #8d92ff;
-      }
-    }
+    z-index: 20;
   }
 }
 .list {

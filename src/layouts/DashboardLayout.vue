@@ -2,7 +2,7 @@
   <div class="w-[100vw] h-full">
     <header-nav />
     <sidebar-nav />
-    <main class="bg-[#161616] lg:ml-[322px] min-h-[100vh]">
+    <main class="bg-[#161616] lg:ml-[322px] pt-[82px] lg:pt-[124px] min-h-[100vh]">
       <router-view />
     </main>
   </div>
